@@ -1,0 +1,5 @@
+#!/bin/sh
+
+PYTHONPATH="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
+
+python -m sitegeist.data.load -c conf/loading.ini $@

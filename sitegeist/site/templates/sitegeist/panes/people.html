@@ -1,0 +1,395 @@
+{% extends "sitegeist/panes/_base.html" %}
+{% load imgs %}
+{% load staticfiles %}
+
+{% block id %}people{% endblock %}
+
+{% block heading %}People{% endblock %}
+
+{% block content %}
+	{% if data.average_age %}
+		<section class="lightBg" id="averageAge">
+			<h1>
+				Median Age
+			</h1>
+			<dl>
+				<dt>{{ data.average_age.years }}</dt>
+				<dd>yr</dd>
+				<dt>{{ data.average_age.months }}</dt>
+				<dd>mo</dd>
+			</dl>
+			<div class="clear"></div>
+			{% comment %}
+			<div class="comparison">
+				<p>
+					<span class="measure">44</span>
+					years
+				</p>
+				<p>
+					<span class="measure">10</span>
+					months
+				</p>
+				<div class="clear"></div>
+			</div>
+			{% endcomment %}
+			<div class="clear"></div>
+		</section>
+	{% endif %}
+	{% if data.age_distribution %}
+		<section class="mediumBg" id="ageDistribution">
+			<h1>
+				Relative Age Distribution
+			</h1>
+			<div id="ageClusters">
+				<ul>
+					<li class="cluster one">
+						<span>&lt; 5</span>
+					</li>
+					<li class="cluster two">
+						<span>25-30</span>
+					</li>
+					<li class="cluster three">
+						<span>55-60</span>
+					</li>
+					<li class="cluster four">
+						<span>75-80</span>
+					</li>
+					<li class="cluster five">
+						<span>&gt; 85</span>
+					</li>
+				</ul>
+			</div>
+			<div class="ageChart">
+				<div id="male" class="ageGroup">
+					<h2>
+						Male
+					</h2>
+
+
+					<ul>
+						<li style="width: {{ data.age_distribution.male.0 }}">
+						Under 5
+						</li>
+						<li style="width: {{ data.age_distribution.male.1 }}">
+						5 to 9
+						</li>
+						<li style="width: {{ data.age_distribution.male.2 }}">
+						10 to 14
+						</li>
+						<li style="width: {{ data.age_distribution.male.3 }}">
+						15 to 17
+						</li>
+						<li style="width: {{ data.age_distribution.male.4 }}">
+						18 and 19
+						</li>
+						<li style="width: {{ data.age_distribution.male.5 }}">
+						20
+						</li>
+						<li style="width: {{ data.age_distribution.male.6 }}">
+						21
+						</li>
+						<li style="width: {{ data.age_distribution.male.7 }}">
+						22 to 24
+						</li>
+						<li style="width: {{ data.age_distribution.male.8 }}">
+						25 to 29
+						</li>
+						<li style="width: {{ data.age_distribution.male.9 }}">
+						30 to 34
+						</li>
+						<li style="width: {{ data.age_distribution.male.10 }}">
+						35 to 39
+						</li>
+						<li style="width: {{ data.age_distribution.male.11 }}">
+						40 to 44
+						</li>
+						<li style="width: {{ data.age_distribution.male.12 }}">
+						45 to 49
+						</li>
+						<li style="width: {{ data.age_distribution.male.13 }}">
+						50 to 54
+						</li>
+						<li style="width: {{ data.age_distribution.male.14 }}">
+						55 to 59
+						</li>
+						<li style="width: {{ data.age_distribution.male.15 }}">
+						60 and 61
+						</li>
+						<li style="width: {{ data.age_distribution.male.16 }}">
+						62 to 64
+						</li>
+						<li style="width: {{ data.age_distribution.male.17 }}">
+						67 to 69
+						</li>
+						<li style="width: {{ data.age_distribution.male.18 }}">
+						70 to 74
+						</li>
+						<li style="width: {{ data.age_distribution.male.19 }}">
+						75 to 79
+						</li>
+						<li style="width: {{ data.age_distribution.male.20 }}">
+						80 to 84
+						</li>
+						<li style="width: {{ data.age_distribution.male.21 }}">
+						85
+						</li>
+					</ul>
+				</div>
+				<div id="female" class="ageGroup">
+					<h2>
+						Female
+					</h2>
+					<ul>
+						<li style="width: {{ data.age_distribution.female.0 }}">
+						Under 5
+						</li>
+						<li style="width: {{ data.age_distribution.female.1 }}">
+						5 to 9
+						</li>
+						<li style="width: {{ data.age_distribution.female.2 }}">
+						10 to 14
+						</li>
+						<li style="width: {{ data.age_distribution.female.3 }}">
+						15 to 17
+						</li>
+						<li style="width: {{ data.age_distribution.female.4 }}">
+						18 and 19
+						</li>
+						<li style="width: {{ data.age_distribution.female.5 }}">
+						20
+						</li>
+						<li style="width: {{ data.age_distribution.female.6 }}">
+						21
+						</li>
+						<li style="width: {{ data.age_distribution.female.7 }}">
+						22 to 24
+						</li>
+						<li style="width: {{ data.age_distribution.female.8 }}">
+						25 to 29
+						</li>
+						<li style="width: {{ data.age_distribution.female.9 }}">
+						30 to 34
+						</li>
+						<li style="width: {{ data.age_distribution.female.10 }}">
+						35 to 39
+						</li>
+						<li style="width: {{ data.age_distribution.female.11 }}">
+						40 to 44
+						</li>
+						<li style="width: {{ data.age_distribution.female.12 }}">
+						45 to 49
+						</li>
+						<li style="width: {{ data.age_distribution.female.13 }}">
+						50 to 54
+						</li>
+						<li style="width: {{ data.age_distribution.female.14 }}">
+						55 to 59
+						</li>
+						<li style="width: {{ data.age_distribution.female.15 }}">
+						60 and 61
+						</li>
+						<li style="width: {{ data.age_distribution.female.16 }}">
+						62 to 64
+						</li>
+						<li style="width: {{ data.age_distribution.female.17 }}">
+						67 to 69
+						</li>
+						<li style="width: {{ data.age_distribution.female.18 }}">
+						70 to 74
+						</li>
+						<li style="width: {{ data.age_distribution.female.19 }}">
+						75 to 79
+						</li>
+						<li style="width: {{ data.age_distribution.female.20 }}">
+						80 to 84
+						</li>
+						<li style="width: {{ data.age_distribution.female.21 }}">
+						85
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</section>
+	{% endif %}
+	{% if data.under_five %}
+		<section class="lightBg" id="childrenUnderFive">
+			<div class="bgImage">
+				<h1>
+					Children Under Five
+				</h1>
+				<dl>
+					<dt>{{ data.under_five.total }}</dt>
+					<dd>{{ data.under_five.per_household }} kids per household</dd>
+					<dd><small>in {{ data.under_five.households }} households</small></dd>
+				</dl>
+				<div class="clear"></div>
+				{% comment %}
+				<div class="comparison">
+					<p>
+						<span class="measure">382</span>
+						children under 5
+					</p>
+					<p>
+						<span class="measure">.67</span>
+						kids/household
+					</p>
+					<div class="clear"></div>
+				</div>
+				{% endcomment %}
+				<div class="clear"></div>
+			</div>
+		</section>
+	{% endif %}
+	{% if data.average_household_income %}
+		<section class="mediumBg" id="householdIncome">
+			<h1>
+				Household Incomes
+			</h1>
+			<dl>
+				<dt>Over $100k</dt>
+				<dd>
+					<span style="width: {{ data.average_household_income.pct_gt_100k }}" class="visual"> {{ data.average_household_income.pct_gt_100k }}</span>
+					<span style="left: {{ data.average_household_income.pct_gt_100k }}" class="unit"> {{ data.average_household_income.pct_gt_100k }}</span>
+				</dd>
+				<dt>$60-$100k</dt>
+				<dd>
+					<span style="width: {{ data.average_household_income.pct_60k_100k }}" class="visual"> {{ data.average_household_income.pct_60k_100k }}</span>
+					<span style="left: {{ data.average_household_income.pct_60k_100k }}" class="unit"> {{ data.average_household_income.pct_60k_100k }}</span>
+				</dd>
+				<dt>$30k-$60k</dt>
+				<dd>
+					<span style="width: {{ data.average_household_income.pct_30k_60k }}" class="visual"> {{ data.average_household_income.pct_30k_60k }}</span>
+					<span style="left: {{ data.average_household_income.pct_30k_60k }}" class="unit"> {{ data.average_household_income.pct_30k_60k }}</span>
+				</dd>
+				<dt>$10k-$30k</dt>
+				<dd>
+					<span style="width: {{ data.average_household_income.pct_10k_30k }}" class="visual"> {{ data.average_household_income.pct_10k_30k }}</span>
+					<span style="left: {{ data.average_household_income.pct_10k_30k }}" class="unit"> {{ data.average_household_income.pct_10k_30k }}</span>
+				</dd>
+				<dt>Under $10k</dt>
+				<dd>
+					<span style="width: {{ data.average_household_income.pct_lt_10k }}" class="visual"> {{ data.average_household_income.pct_lt_10k }} </span>
+					<span style="left: {{ data.average_household_income.pct_lt_10k }} " class="unit"> {{ data.average_household_income.pct_lt_10k }} </span>
+				</dd>
+			</dl>
+			{% comment %}
+			<div class="comparison">
+				<p>
+					<span class="measure">382</span>
+					children under 5
+				</p>
+				<p>
+					<span class="measure">.67</span>
+					kids/household
+				</p>
+				<div class="clear"></div>
+			</div>
+			{% endcomment %}
+			<div class="clear"></div>
+		</section>
+	{% endif %}
+	{% comment %}
+		<section class="darkBg" id="ethnicity">
+			<h1>
+				Most Common Ethnicity
+			</h1>
+			<div class="ethnicityGraph">
+				<img id="ethnicityPie" src="{% inlineimg "sitegeist/images/pie.svg" %}" style="margin-left: -42px;">
+				<div class="labelCircle">
+					<span class="num-people">{{ data.ethnicity.total }} people</span>
+					<span class="unit">{{ data.ethnicity.pct }}</span>
+					<h2>
+						{{ data.ethnicity.name }}
+					</h2>
+				</div>
+			</div>
+			<div class="comparison">
+				<p>
+					<span class="measure">382</span>
+					children under 5
+				</p>
+				<p>
+					<span class="measure">.67</span>
+					kids/household
+				</p>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</section>
+	{% endcomment %}
+	{% if data.gender %}
+		<section class="lightBg" id="gender">
+			<h1>
+				Gender
+			</h1>
+			<img id="genderPie" src="{% inlineimg "sitegeist/images/genderPie.svg" %}">
+			<img class="genderCap" src="{% inlineimg "sitegeist/images/genderCap.png" %}" style="width: 116px;">
+			<dl>
+				<dt class="male">{{ data.gender.male_pct }}</dt>
+				<dd class="male">Male</dd>
+				<dt class="female">{{ data.gender.female_pct }}</dt>
+				<dd class="female">Female</dd>
+			</dl>
+			<div class="clear"></div>
+		</section>
+	{% endif %}
+	{% if data.contributions %}
+		<section class="mediumBg" id="politicalContribs">
+			<h1>
+				Political Contributions
+			</h1>
+			<div id="partyMajority">
+				<dl>
+					<dt class="rep">Republicans</dt>
+					<dd class="rep">{{ data.contributions.r }}</dd>
+					<dt class="dem">Democrats</dt>
+					<dd class="dem">{{ data.contributions.d }}</dd>
+				</dl>
+				{% if data.contributions.r_raw > data.contributions.d_raw %}
+					<img class="lean-rep" src="{% inlineimg "sitegeist/images/politicalMajority.png" %}" style="width: 283px;">
+				{% elif data.contributions.r_raw < data.contributions.d_raw %}
+					<img class="lean-dem" src="{% inlineimg "sitegeist/images/politicalMajority.png" %}" style="width: 283px;">
+				{% else %}
+					<img src="{% inlineimg "sitegeist/images/politicalMajority.png" %}" style="width: 283px;">
+				{% endif %}
+			</div>
+			{% comment %}
+			<div class="comparison">
+				<p>
+					<span class="measure">382</span>
+					children under 5
+				</p>
+				<p>
+					<span class="measure">.67</span>
+					kids/household
+				</p>
+				<div class="clear"></div>
+			</div>
+			{% endcomment %}
+			<div class="clear"></div>
+		</section>
+	{% endif %}
+	<footer class="lightBg" id="sources">
+		<h1>
+		Sources
+		</h1>
+		<ul>
+			<li>
+				<h2>
+					Demographics:
+				</h2>
+				<a href="http://www.census.gov/">U.S. Census Bureau</a> and <br><a href="http://www.census.gov/acs/www/">2010 American Community Survey</a>
+				<br>
+				<small><i>This product uses the Census Bureau Data API but is not endorsed or certified by the Census Bureau.</i></small>
+			</li>
+			<li>
+				<h2>
+					Political Contributions:
+				</h2>
+				<a href="http://influenceexplorer.com/">Influence Explorer</a>
+			</li>
+		</ul>
+	</footer>
+	{% include "includes/pane_contact.html" %}
+{% endblock %}

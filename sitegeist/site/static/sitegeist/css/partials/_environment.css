@@ -1,0 +1,317 @@
+#environment .lightBg {
+  background-color: #F5F5ED; }
+
+#environment .mediumBg {
+  background-color: #FFD400;
+  /*  yellow  */ }
+
+#environment .darkBg {
+  background-color: #423F2F; }
+
+#environment .lightBg h1 {
+  color: #423F2F;
+  /*  yellow grey  */ }
+
+#environment .mediumBg h1 {
+  color: #FFFEF2;
+  /*  yellow white  */ }
+
+#environment .mediumBg h1 span, #environment .mediumBg .comparison {
+  color: #423F2F;
+  /*  yellow grey  */ }
+
+#environment .darkBg h1, #environment .darkBg .comparison {
+  color: #FFFEE6;
+  /*  darker yellow white  */ }
+
+#environment .comparison {
+  background: url(../../images/house_environment.png) right top no-repeat; }
+
+#environment .lightBg .comparison {
+  background-position: right top; }
+
+#environment .mediumBg .comparison {
+  background-position: right center; }
+
+#environment .darkBg .comparison {
+  background-position: right -54px; }
+
+#environment .content #weatherNow {
+  margin-top: -14px;
+  position: relative; }
+
+#environment.superfund .ooze {
+  background: url(../../images/superfund.png) left top no-repeat;
+  height: 114px;
+  position: absolute;
+  z-index: 10;
+  font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+  font-size: 15px;
+  padding-top: 8px; }
+
+#environment.superfund .ooze h2 {
+  text-transform: uppercase;
+  display: block;
+  float: left;
+  margin: 0 0 0 64px;
+  font-size: 15px;
+  font-weight: normal;
+  color: #FFFEE6;
+  /*  darker yellow white  */
+  width: 63px; }
+
+#environment.superfund .ooze p {
+  display: block;
+  float: left;
+  margin: 0 0 0 10px;
+  color: #FFFEE6;
+  /*  darker yellow white  */
+  width: 183px;
+  line-height: 1.2; }
+
+#environment.superfund .ooze p em {
+  color: #FFD400;
+  /*  yellow  */
+  font-style: normal; }
+
+#environment.superfund #weatherNow .bgImage {
+  padding-top: 55px;
+  background-position: -25px 18px; }
+
+/************  Weather Right Now */
+section#weatherNow .bgImage {
+  background: url(../../images/bg_currentWeather.png) -25px -37px no-repeat;
+  text-align: center;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+section#weatherNow {
+  padding-left: 0;
+  padding-right: 0; }
+
+#environment section#weatherNow h1 {
+  color: #423F2F;
+  /*  yellow grey  */ }
+
+section#weatherNow h1 span {
+  font-size: 15px;
+  display: block;
+  font-weight: 300;
+  text-transform: lowercase; }
+
+section#weatherNow .comparison {
+  margin-top: 30px; }
+
+section#weatherNow h2 {
+  font-size: 75px;
+  color: #FFFEF2;
+  /*  yellow white  */
+  line-height: 1;
+  text-align: center;
+  margin: 0;
+  font-weight: 300;
+  margin-bottom: 60px; }
+
+section#weatherNow .climateDesc {
+  text-transform: uppercase;
+  font-size: 15px;
+  text-align: center;
+  display: block;
+  color: #423F2F;
+  /*  yellow grey  */
+  font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+  font-weight: 500; }
+
+section#weatherNow .rainPercent {
+  background: url(../../images/rainPercent.png) right top no-repeat;
+  width: 10px;
+  height: 100px;
+  text-align: center;
+  font-size: 30px;
+  color: #423F2F;
+  /*  yellow grey  */
+  padding: 41px 70px 18px 6px; }
+
+/************  Record Temperatures */
+section#recordTemps {
+  text-align: center; }
+
+section#recordTemps h1 span {
+  font-size: 15px;
+  display: block;
+  font-weight: 300;
+  text-transform: lowercase; }
+
+section#recordTemps .high, section#recordTemps .low {
+  float: left;
+  width: 50%;
+  text-align: center; }
+
+section#recordTemps h2, section#recordTemps h2 {
+  color: #423F2F;
+  /*  yellow grey  */
+  font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 0; }
+
+section#recordTemps .high p, section#recordTemps .low p {
+  margin-top: -10px; }
+
+section#recordTemps .high p span, section#recordTemps .low p span {
+  display: block;
+  font-size: 17px;
+  color: #938D87; }
+
+section#recordTemps .high, section#recordTemps .low {
+  font-size: 30px;
+  color: #FFD400;
+  /*  yellow  */ }
+
+section#recordTemps .high {
+  background: url(../../images/high.png) left 10px no-repeat; }
+
+section#recordTemps .low {
+  background: url(../../images/low.png) right 10px no-repeat; }
+
+/************  Monthly Temperatures */
+section#monthlyTemps h1 span {
+  font-size: 15px;
+  display: block;
+  font-weight: 300;
+  text-transform: lowercase; }
+
+/************  Pollen Levels */
+section#pollen .bgImage {
+  background: url("../../images/pollen.png") left top no-repeat; }
+
+section#pollen {
+  padding-left: 0;
+  padding-right: 0; }
+
+section#pollen h1 span {
+  font-size: 15px;
+  display: block;
+  font-weight: 300;
+  text-transform: lowercase; }
+
+section#pollen .comparison {
+  margin-right: 15px; }
+
+section#pollen .pollenCat {
+  background: url("../../images/pollen_bg.png") center top no-repeat;
+  width: 33.33333333%;
+  float: left;
+  text-align: center;
+  font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+  color: #FFFEF2;
+  /*  yellow white  */
+  position: relative; }
+
+section#pollen .pollenCat span {
+  font-size: 25px;
+  font-weight: 300;
+  margin-top: 2px; }
+
+section#pollen img {
+  position: absolute;
+  top: 10px; }
+
+section#pollen h2 {
+  font-size: 15px;
+  font-weight: 300; }
+
+section#pollen .high .high, section#pollen .low .low {
+  display: block; }
+
+section#pollen .high .low, section#pollen .low .high {
+  display: none; }
+
+section#pollen .predominant {
+  border-top: 1px dotted #88867d;
+  text-align: center; }
+
+section#pollen .predominant h3 {
+  font-size: 15px;
+  color: #FFD400;
+  /*  yellow  */
+  text-transform: uppercase;
+  font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+  font-weight: 300;
+  margin-bottom: 0; }
+
+section#pollen .predominant li {
+  display: inline;
+  font-size: 24px;
+  color: #FFFEE6;
+  /*  darker yellow white  */
+  font-weight: 300; }
+
+/************  Air Quality */
+section#air {
+  background: url("../../images/pollen.png") left top no-repeat; }
+
+section#air h2 {
+  text-align: center;
+  color: #423F2F;
+  /*  yellow grey  */
+  font-weight: 300;
+  margin: -20px 0 15px 0; }
+
+section#air h2 span {
+  text-align: center;
+  font-size: 75px;
+  display: block;
+  color: #423F2F;
+  /*  yellow grey  */
+  font-weight: 700; }
+
+section#air .airChart {
+  color: #FFFEF2;
+  /*  yellow white  */
+  font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300; }
+
+section#air .airChart .bar {
+  position: relative;
+  background-color: #FFFEF2;
+  /*  yellow white  */
+  height: 9px;
+  width: 100%; }
+
+section#air .airChart .bar img {
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+section#air .airChart span.measure {
+  width: 25%;
+  background-color: #423F2F;
+  /*  yellow grey  */
+  text-indent: -9999em;
+  display: block;
+  height: 9px; }
+
+section#air h1 span {
+  font-size: 15px;
+  display: block;
+  font-weight: 300;
+  text-transform: lowercase; }
+
+section#air .definition span {
+  display: block;
+  width: 33.333333%;
+  float: left; }
+
+section#air .scale span {
+  display: block;
+  width: 50%;
+  float: left; }
+
+section#air .middleUnit {
+  text-align: center; }
+
+section#air .lastUnit {
+  text-align: right; }

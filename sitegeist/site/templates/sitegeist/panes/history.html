@@ -1,0 +1,101 @@
+{% extends "sitegeist/panes/_base.html" %}
+{% load imgs %}
+
+{% block id %}history{% endblock %}
+
+{% block heading %}History{% endblock %}
+
+{% block content %}
+	{% if data.median_year %}
+		<section class="lightBg" id="houseAge">
+			<h1>
+				Median Age of Homes
+			</h1>
+			<h2>{{ data.median_home_age }} <small>years</small></h2>
+		</section>
+	{% endif %}
+	<section class="mediumBg" id="pop">
+		<h1>
+			Housing Units In 2010
+		</h1>
+		<div class="populationTicker">
+			<span class="numberBefore">{{ data.housing.current_before }}</span>
+			<h2>
+				{{ data.housing.current }}
+			</h2>
+			<span class="numberafter">{{ data.housing.current_after }}</span>
+		</div>
+	</section>
+	{% if data.housing.history_svg %}
+		<section class="lightBg" id="popHistory">
+			<h1>
+				Housing Units Over Time
+				<span class="">from 1970 to 2010</span>
+			</h1>
+			<div style="margin: 0 auto; width: 320px; height: 190px;">{{ data.housing.history_svg|safe }}</div>
+		</section>
+	{% endif %}
+	{% comment %}
+	<section class="darkBg" id="nearbyHistory">
+		<h1>
+			Nearby Historic Landmarks
+		</h1>
+		<ul class="barChart">
+			<li style="width: 20%;">
+				<a href="">
+				<span class="location">
+				<span class="measure">.26mi</span>
+					Saint Francis Luthern Church
+				</span>
+				</a>
+			</li>
+			<li style="width: 35%;">
+				<a href="">
+				<span class="location">
+				<span class="measure">.35mi</span>
+					Mission San Francisco de Asís
+				</span>
+				</a>
+			</li>
+			<li style="width: 60%;">
+				<a href="">
+				<span class="location">
+				<span class="measure">.70mi</span>
+					San Francisco City Hall
+				</span>
+				</a>
+			</li>
+			<li style="width: 85%;">
+				<a href="">
+				<span class="location">
+				<span class="measure">.83mi</span>
+					Abner Phelps House
+				</span>
+				</a>
+			</li>
+			<li style="width: 100%;">
+				<a href="">
+				<span class="location">
+				<span class="measure">2.01mi</span>
+					Old Saint Mary's Cathedral
+				</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	{% endcomment %}
+	<footer class="lightBg" id="sources">
+		<h1>
+			Sources
+		</h1>
+		<ul>
+			<li>
+				<h2>
+					Historical data:
+				</h2>
+				<a href="https://www.nhgis.org/">Minnesota Population Center. National Historical Geographic Information System: Version 2.0. Minneapolis, MN: University of Minnesota 2011.</a>
+			</li>
+		</ul>
+	</footer>
+	{% include "includes/pane_contact.html" %}
+{% endblock %}

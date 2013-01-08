@@ -1,0 +1,62 @@
+{% extends "sitegeist/panes/_base.html" %}
+{% load imgs %}
+
+{% block css %}
+	{{ block.super }}
+	<style>
+		section p a { color: #666; text-decoration: underline; }
+		section li {
+			list-style: disc;
+			margin: 1em 0 1em 1em;
+		}
+	</style>
+{% endblock %}
+
+{% block id %}methodology{% endblock %}
+
+{% block heading %}<span class="sitegeistLogo">Sitegeist</span>{% endblock %}
+
+{% block content %}
+
+    <section class="mediumBg">
+        <h1>
+            History
+        </h1>
+        <p>Sitegeist showcases what's possible when we have access to data. It is the third in the Sunlight Foundation’s series of National Data Apps, funded by the <a href="http://www.knightfoundation.org/">John S. and James L. Knight Foundation</a>. The other two National Data Apps are <a href="http://sunlightfoundation.com/health/">Sunlight Health</a>, that brings healthcare ratings data and prescription drug safety information to your pocket, and <a href="http://upwardly.us/">Upwardly Mobile</a>, a web app that helps users find a better place to live by comparing salary, living and employment data and ranking it based on their preferences. Sitegesit was created by the <a href="http://sunlightfoundation.com/">Sunlight Foundation</a>, in consultation with design firm <a href="http://www.ideo.com/">IDEO</a>.</p>
+    </section>
+
+    <section class="mediumBg">
+        <h1>
+            Using Sitegeist
+        </h1>
+        <p>After you set your location, Sitegeist will display facts and statistics about the surrounding area, including fun things to do and see. You can either drag the marker to a specific location you want to know about, or center the placemark and see information about the local area.</p>
+
+        <p>After the app sets a location, you can see an array of information falling into five categories: people, housing, fun, environment and history. Some of the things you might learn about a location include:</p>
+
+        <ul>
+			<li>The average age of the people who live there and what political party they give to.</li>
+			<li>Fun things to do in the area including nearby museums and movie theaters.</li>
+			<li>Tips for great restaurants to visit and the most checked-in venue.</li>
+			<li>The percentage of people who rent or own homes in the area.</li>
+			<li>What the weather is like and what the pollen levels are for the day, as well as record high and low temperatures.</li>
+			<li>How close you are to a superfund site.</li>
+		</ul>
+
+    </section>
+
+    <section class="mediumBg">
+        <h1>
+            Data Sources
+        </h1>
+        <p>We collected data from government sources and other websites that use government data and make it available via APIs, such as the weather data from Dark Sky. The app also accesses APIs of familiar commercial websites, including Yelp! and Foursquare, for the "fun" information. All sources are listed at the bottom of each category.</p>
+        <p>The geographic area for the data displayed in Sitegeist varies by each data set. Much of the data is based on the U.S. Census, which will pull data of the census tract for the pin you dropped - these are fairly small areas, from a few city blocks to a neighborhood. Political contributions are based on ZIP codes, which can be much larger and third party services such as Foursquare and Yelp! use a simple radius around the user determined by them.</p>
+    </section>
+
+    <section class="mediumBg">
+        <h1>
+            Contact and More Information
+        </h1>
+        <p>For questions or comments, please <a href="mailto:sitegeist@sunlightfoundation.com">contact us</a>. We will respond promptly.</p>
+    </section>
+
+{% endblock %}

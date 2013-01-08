@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}main.css">
+    <link rel="shortcut icon" href="http://assets.sunlightfoundation.com.s3.amazonaws.com/favicon.ico">
+
+    <meta property="og:site_name" content="Sunlight Foundation">
+    <meta property="og:title" content="Sitegeist">
+    <meta property="og:description" content="Ground yourself with data. Understand and uncover the identity of your location with a tap.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://sitegeist.sunlightfoundation.com/">
+    <meta property="og:image" content="http://sitegeist.s3.amazonaws.com/fb/20121212-300x300.jpg">
+    <meta property="og:locale" content="en_US">
+	<meta property="fb:admins" content="7812952">
+
+	<meta name="google-site-verification" content="6f56e2g-dv2WX5DYntrnfuCmmto5m4USS2nF2BwOiN4">
+
+	<title>Sitegeist by the Sunlight Foundation</title>
+
+    <script type="text/javascript" src="//use.typekit.net/hid0uhh.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</head>
+<body>
+    <div id="container">
+        <header>
+            <a id="foundationSm" class="textReplace" href="http://sunlightfoundation.com">Sunlight Foundation</a>
+            <h1><a class="textReplace" href="/">Sitegeist</a></h1>
+            <div id="feature" class="clearfix">
+                <img src="{{ STATIC_URL }}images/img_phones.png" />
+                <h2>Ground yourself with data</h2>
+                <p>Understand and uncover the identity of your location with a tap</p>
+                <ul id="downloadLinks" >
+                    <li><a id="appBtn" class="textReplace" href="/ios/">Available on the App Store</a></li>
+                    <li><a id="appBtn2" class="textReplace" href="/android/">Android App on Google Play</a></li>
+                </ul>
+                <div id="socialMedia" style="padding-top: 13px">
+					<script type="text/javascript" src="http://cdn.gigya.com/js/gigyaGAIntegration.js" ></script>
+					<script src="http://cdn.gigya.com/js/socialize.js?apiKey=3_BLRB_2LlQJZDUW1wb9_ZOps-sOnnzA_e6xxNSwJBBGoB-SavmPAKHkaVVZPE5Kx8"></script>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="container clearfix">
+        <div class="span6 ltCol">
+            <p class="normalMargins">Sitegeist is a mobile application that helps you to learn more about your surroundings in seconds. Drawing on publicly available information, the app presents solid data in a simple at-a-glance format to help you tap into the pulse of your location. From demographics about people and housing to the latest popular spots or weather, Sitegeist presents localized information visually so you can get back to enjoying the neighborhood. The application draws on free APIs such as the U.S. Census, Yelp! and others to showcase what's possible with access to data. Sitegeist was created by the <a href="http://sunlightfoundation.com/">Sunlight Foundation</a> in consultation with design firm <a href="http://www.ideo.com/">IDEO</a> and with support from the <a href="http://www.knightfoundation.org/">John S. and James L. Knight Foundation</a>. It is the third in a series of National Data Apps.</p>
+
+            <p class="normalMargins">
+                Some of the data you'll learn about a location includes:
+
+                <ul class="minilist">
+                    <li>Age Distribution</li>
+                    <li>Political Contributions</li>
+                    <li>Average Rent</li>
+                    <li>Popular Local Spots</li>
+                </ul>
+
+                <ul class="minilist">
+                    <li>Recommended Restaurants</li>
+                    <li>How People Commute</li>
+                    <li>Record Temperatures</li>
+                    <li>Housing Units Over Time</li>
+                </ul>
+            </p>
+        </div>
+        <div id="appPics" class="span6">
+            <img src="{{ STATIC_URL }}images/img_phone1.png" />
+            <img src="{{ STATIC_URL }}images/img_phone2.png" />
+        </div>
+    </div>
+    <div id="footerWrapper">
+        <footer>
+            <div id="footerCol1">
+                <a id="foundationLogo" class="textReplace" href="http://sunlightfoundation.com">Sunlight Foundation</a>
+                <p>Founded in 2006, the Sunlight Foundation is a non-partisan non-profit that uses cutting-edge technology and ideas to make government transparent and accountable. Visit <a href="http://sunlightfoundation.com">SunlightFoundation.com</a> to learn more.</p>
+            </div>
+            <div id="footerCol2">
+                <h4 class="withTip h5">Like This Project and Want to Discover Others Like It?</h4>
+                <p>Join the Sunlight Foundation's open government community to learn more</p>
+                <form action="/subscribe/" method="post" id="sfapp-subscribe-form" class="form-inline">
+                    {% csrf_token %}
+                    <input type="hidden" name="response" value="json">
+                    <ul>
+                        <li>
+                            <label for="id_email">Email Address</label>
+                            <input id="id_email" type="text" name="email" >
+                        </li>
+                        <li>
+                            <label for="id_zip">Zip Code</label>
+                            <input id="id_zip" type="text" name="zipcode" >
+                        </li>
+                        <li>
+                            <button id="btnSignup" type="submit">
+                                 <span>Sign Up</span>
+                            </button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <div class="clear"></div>
+            {% comment %}
+            TODO: Add actual features
+            <div class="featuredOn">
+            	<h3>
+            		Featured On
+            	</h3>
+            	<ul>
+            		<li>
+            			<a href="" target="blank"><img src="" width="120" height="67" alt=""></a>
+            		</li>
+            		<li>
+            			<a href="" target="blank"><img src="" width="120" height="67" alt=""></a>
+            		</li>
+            	</ul>
+            </div>
+            {% endcomment %}
+        </footer>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="{{ STATIC_URL }}sfapp.js"></script>
+    <script>
+
+    	var ua = new gigya.socialize.UserAction();
+        ua.setTitle("With just a tap, better understand your surroundings using Sitegeist.");
+        ua.setDescription("Sitegeist is a mobile application that helps you to learn more about your surroundings in seconds. Drawing on publicly available information, the app presents solid data in a simple at-a-glance format to help you tap into the pulse of your location. From demographics about people and housing to the latest popular spots or weather, Sitegeist presents localized information visually so you can get back to enjoying the neighborhood. The application draws on free APIs such as the U.S. Census, Yelp! and others to showcase what's possible with access to data.");
+        ua.addMediaItem({
+            type: 'image',
+            href: window.location.href,
+            src: 'http://sitegeist.s3.amazonaws.com/fb/20121212-300x300.jpg'
+        });
+
+        var uaTwitter = new gigya.socialize.UserAction();
+        uaTwitter.setLinkBack("http://sitegeist.sunlightfoundation.com/");
+        uaTwitter.setTitle("With just a tap, better understand your surroundings using Sitegeist #opengov")
+
+        /*
+         * parameter docs at:
+         * http://developers.gigya.com/020_Client_API/020_Methods/socialize.showShareBarUI
+         */
+        var params = {
+            containerID: 'socialMedia',
+            iconsOnly: true,
+            // iconSize: 16,
+            layout: 'horizontal',
+            noButtonBorders: true,
+            shareButtons: [
+                {
+                    provider: 'twitter',
+                    via: 'sunfoundation',
+                    userAction: uaTwitter
+                },
+                {
+                    provider: 'facebook',
+            		url: 'http://sitegeist.sunlightfoundation.com/'
+                }
+            ],
+            shortURLs: 'never',
+            showCounts: 'right',
+            userAction: ua
+        };
+        gigya.socialize.showShareBarUI(params);
+    </script>
+    {% include "includes/ga.html" %}
+</body>
+
+</html>

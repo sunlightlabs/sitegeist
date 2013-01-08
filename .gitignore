@@ -1,0 +1,6 @@
+*.pyc
+.*.swp
+.DS_Store
+static_root/
+data/cache/
+sitegeist/settings/local.py

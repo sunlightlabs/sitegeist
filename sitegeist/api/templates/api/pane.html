@@ -1,0 +1,20 @@
+<!doctype html>
+{% load staticfiles %}
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width">
+        <style>
+            body { background-color: #30a6fc; margin: 0; padding: 0; }
+            .container { width: 320px; }
+        </style>
+        {% block css %}{% endblock %}
+    </head>
+    <body>
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+        {% block js %}{% endblock %}
+    </body>
+</html>

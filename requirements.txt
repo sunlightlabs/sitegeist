@@ -1,0 +1,21 @@
+git+git://github.com/sunlightlabs/saucebrush.git#egg=saucebrush
+South==0.7.6
+raven==2.0.10
+
+requests==0.14.0
+requests-oauth==0.4.1
+
+us==0.3
+census==0.3
+
+django==1.4.3
+dj-database-url==0.2.1
+pymongo==2.3
+
+# boundary service requirements
+django-appconf
+django-jsonfield
+django-tastypie
+-e git://github.com/tauberer/represent-boundaries.git@1186ce64f786929ce5efb28515129d760e1f0c9a#egg=boundaries
+
+gunicorn==0.15.0

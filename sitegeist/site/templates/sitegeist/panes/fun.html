@@ -1,0 +1,163 @@
+{% extends "sitegeist/panes/_base.html" %}
+{% load imgs %}
+
+{% block id %}fun{% endblock %}
+
+{% block heading %}Fun{% endblock %}
+
+{% block content %}
+	{% if data.recommended %}
+		<section class="lightBg" id="places">
+			<h1>
+				Recommended by <a href="http://m.yelp.com/"><img src="{% inlineimg "sitegeist/images/yelp.png" %}" style="width: 50px; margin-top: -10px;"></a>
+			</h1>
+			{% for place in data.recommended %}
+				<div class="place">
+					<!--
+					<div class="proximity">
+						<span class="distance">0.4</span>
+						mi
+					</div>
+					-->
+					<div class="placeName">
+						<h2>
+							<a href="{{ place.mobile_url }}">{{ place.name }}</a>
+						</h2>
+						<p class="details">
+							<img src="{{ place.rating_url }}" class="yelp-rating"> <small>{{ place.reviews }} reviews</small>
+							<br>
+							<span class="placeType">{{ place.categories|join:", " }}</span>
+							<br>
+							{% if place.address %}
+								<span class="location">{{ place.address }}</span>
+							{% endif %}
+						</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+			{% endfor %}
+			<div class="clear"></div>
+		</section>
+	{% endif %}
+	{% comment %}
+		<section class="mediumBg todo" id="restaurants">
+			<h1>
+				Restaurants by Price
+				<span>Within 3 miles</span>
+			</h1>
+			<div class="comparison">
+				<p>
+					<span class="measure">$1605/mo</span>
+					Avg. Rent
+				</p>
+				<p>
+					<span class="measure">23%</span>
+					of people rent
+				</p>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</section>
+	{% endcomment %}
+	{% if data.foursquare %}
+		<section class="darkBg" id="foursquare">
+			<h1>
+				Explore
+				<span>{{ data.foursquare.reason }}</span>
+			</h1>
+			<a class="location" href="https://foursquare.com/v/{{ data.foursquare.id }}">
+				{{ data.foursquare.name }}
+			</a>
+			<h2 class="measure">
+				{{ data.foursquare.stats.checkinsCount }}
+				<span>check-ins</span>
+			</h2>
+
+			<p style="text-align: center;">
+				by
+				<span class="measure">{{ data.foursquare.stats.usersCount }}</span>
+				people on <a href="http://foursquare.com">Foursquare</a>
+			</p>
+			<!--
+			<div class="comparison">
+				<p>
+					by
+					<span class="measure">{{ data.foursquare.stats.usersCount }}</span>
+					people
+				</p>
+				<div class="clear"></div>
+			</div>
+			-->
+			<div class="clear"></div>
+		</section>
+	{% endif %}
+	{% if data.theaters %}
+		<section class="mediumBg" id="theaters">
+			<div class="bgImage">
+				<h1>
+					Movie Theaters
+					<span>Within 5 miles</span>
+				</h1>
+				<h2 id="numberOfTheaters">{{ data.theaters|length }}</h2>
+				<ul>
+					{% for theater in data.theaters %}
+						<li class="theater">
+							<span class="measure">{{ theater.location.distance }}m</span>
+							<a href="https://foursquare.com/v/{{ theater.id }}">{{ theater.name }}</a>
+						</li>
+					{% endfor %}
+				</ul>
+				<div class="clear"></div>
+			</div>
+		</section>
+	{% endif %}
+	{% if data.localflavor %}
+		<section class="lightBg" id="flavor">
+			<h1>
+				Local Flavor
+				<span>Top rated "local flavor" on <a href="http://m.yelp.com/"><img src="{% inlineimg "sitegeist/images/yelp.png" %}" style="width: 50px; margin-top: -8px;"></a></span>
+			</h1>
+			{% for place in data.localflavor %}
+				<div class="topPick one">
+
+					{% if place.image_url %}
+						<img class="photo" src="{{ place.image_url }}" style="width: 100px; height: 100px;">
+					{% else %}
+						<img class="photo" src="{% inlineimg "sitegeist/images/yelp-noimg.png" %}" style="width: 100px; height: 100px;">
+					{% endif %}
+					<h2>
+						{% if place.mobile_url %}
+							<a href="{{ place.mobile_url }}">{{ place.name }}</a>
+						{% else %}
+							{{ place.name }}
+						{% endif %}
+					</h2>
+					<img src="{{ place.rating_url }}" class="yelp-rating"> <small>{{ place.reviews }} reviews</small>
+
+					<div class="clear"></div>
+				</div>
+			{% endfor %}
+			<div class="clear"></div>
+		</section>
+	{% endif %}
+	<footer class="lightBg" id="sources">
+		<h1>
+			Sources
+		</h1>
+		<ul>
+			<li>
+				<h2>
+					Local recommendations and "flavor":
+				</h2>
+				<a href="http://yelp.com/">Yelp</a>
+			</li>
+			<li>
+				<h2>
+					Explore and movie theaters:
+				</h2>
+				<a href="http://foursquare.com/">Foursquare</a>
+			</li>
+		</ul>
+	</footer>
+	{% include "includes/pane_contact.html" %}
+{% endblock %}

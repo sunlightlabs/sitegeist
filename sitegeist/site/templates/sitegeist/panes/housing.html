@@ -1,0 +1,305 @@
+{% extends "sitegeist/panes/_base.html" %}
+{% load imgs %}
+
+{% block id %}housing{% endblock %}
+
+{% block heading %}Housing{% endblock %}
+
+{% block js %}
+	<script>
+		svg2canvas("svg-rentpct");
+	</script>
+{% endblock %}
+
+{% block content %}
+	{% if data.owned %}
+		<section class="lightBg" id="houseSale">
+			<h1>
+				Median Home Value
+			</h1>
+			<h2>
+				{{ data.owned.median_value }}
+			</h2>
+			{% comment %}
+			<div class="comparison">
+				<p>
+					<span class="measure">$407,152</span>
+				</p>
+				<div class="clear"></div>
+			</div>
+			{% endcomment %}
+			<div class="clear"></div>
+		</section>
+	{% endif %}
+	{% if data.rentals %}
+		<section class="lightBg" id="houseRent">
+			<h1>
+				Average Rent
+			</h1>
+			<h2>
+				{{ data.rentals.median_cost }}
+				<span>per month</span>
+			</h2>
+			<div class="rentChart" id="svg-rentpct">
+				{{ data.rentals.svg|safe }}
+			</div>
+			<h3>
+				{{ data.rentals.pct }}
+				<span>of people rent</span>
+			</h3>
+			{% comment %}
+			<div class="comparison">
+				<p>
+					<span class="measure">$1605/mo</span>
+					Avg. Rent
+				</p>
+				<p>
+					<span class="measure">23%</span>
+					of people rent
+				</p>
+				<div class="clear"></div>
+			</div>
+			{% endcomment %}
+			<div class="clear"></div>
+		</section>
+	{% endif %}
+	{% comment %}
+	<section class="darkBg todo" id="schools">
+		<h1>
+			School Rating
+			<span>based on test scores</span>
+		</h1>
+		<div class="appleChart">
+			<img class="apple" src="{% img "sitegeist/images/apple.png" %}">
+			<img class="apple" src="{% img "sitegeist/images/apple.png" %}">
+			<img class="apple" src="{% img "sitegeist/images/apple.png" %}">
+			<img class="apple" src="{% img "sitegeist/images/apple.png" %}">
+			<img class="apple" src="{% img "sitegeist/images/apple.png" %}">
+			<img class="apple" src="{% img "sitegeist/images/apple.png" %}">
+		</div>
+		<h2>
+			9
+			<span>/10</span>
+		</h2>
+		<div class="comparison">
+			<p>
+
+				Rating <span class="measure">7</span>/10
+			</p>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	</section>
+	{% endcomment %}
+	{% if data.transport %}
+		<section class="mediumBg" id="commuteTimes">
+			<h1>
+				How People Commute
+			</h1>
+			<div id="car" class="transitType">
+				<img class="transitIcon" src="{% inlineimg "sitegeist/images/transitIcon_car.png" %}" style="width: 80px;">
+				<h2>Car</h2>
+				<p>
+				{{ data.transport.auto_pct }}<span class="timeUnit minute"> %</span>
+				</p>
+			</div>
+			<div id="public" class="transitType">
+				<img class="transitIcon" src="{% inlineimg "sitegeist/images/transitIcon_public.png" %}" style="width: 80px;">
+				<h2>Public</h2>
+				<p>
+				{{ data.transport.public_pct }}<span class="timeUnit minute"> %</span>
+				</p>
+			</div>
+			<div id="walk" class="transitType">
+				<img class="transitIcon" src="{% inlineimg "sitegeist/images/transitIcon_walk.png" %}" style="width: 80px;">
+				<h2>Walk</h2>
+				<p>
+				{{ data.transport.walk_pct }}<span class="timeUnit minute" >%</span>
+				</p>
+			</div>
+			<div id="bike" class="transitType">
+				<img class="transitIcon" src="{% inlineimg "sitegeist/images/transitIcon_bike.png" %}" style="width: 80px;">
+				<h2>Bike</h2>
+				<p>
+				{{ data.transport.bike_pct }}<span class="timeUnit minute"> %</span>
+				</p>
+			</div>
+
+			{% comment %}
+			<div class="comparison">
+				<p class="car measure">
+					45m
+				</p>
+				<p class="public measure">
+					2h 35m
+				</p>
+				<p class="walk measure">
+					30m
+				</p>
+				<p class="bike measure">
+					1h 15m
+				</p>
+				<div class="clear"></div>
+			</div>
+			{% endcomment %}
+			<div class="clear"></div>
+		</section>
+	{% endif %}
+	{% comment %}
+	<section class="lightBg todo" id="taxis">
+		<h1>
+			Taxis
+		</h1>
+		<div class="taxiRate initial">
+			<p>
+				45<span class="timeUnit minute"> m</span>
+			</p>
+		</div>
+		<div class="taxiRate perMile">
+			<p>
+				45<span class="timeUnit minute"> m</span>
+			</p>
+		</div>
+		<div class="taxiRate stopped">
+			<p>
+				45<span class="timeUnit minute"> m</span>
+			</p>
+		</div>
+		<div class="comparison">
+			<p>
+				<span class="measure">382</span>
+				children under 5
+			</p>
+			<p>
+				<span class="measure">.67</span>
+				kids/household
+			</p>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	</section>
+	<section class="mediumBg todo" id="walkable">
+		<h1>
+			Walkable Nearby
+		</h1>
+		<table>
+			<thead>
+				<tr>
+					<td class="measure">
+						Amount
+					</td>
+					<td>
+						Amenity type
+					</td>
+					<td class="comparison">
+						Comparison
+					</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="amenity" id="grocery">
+					<td class="measure">
+						5
+					</td>
+					<td class="amenityType">
+						<h2>Grocery Stores</h2>
+						<img class="apple" src="{% img "sitegeist/images/hamburger.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/hamburger.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/hamburger.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/hamburger.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/hamburger.png" %}" style="width: 27px;">
+					</td>
+					<td class="comparison">
+						3
+					</td>
+				</tr>
+				<tr class="amenity" id="drug">
+					<td class="measure">
+						2
+					</td>
+					<td class="amenityType">
+						<h2>Drug Stores</h2>
+						<img class="apple" src="{% img "sitegeist/images/drugs.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/drugs.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/drugs.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/drugs.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/drugs.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/drugs.png" %}" style="width: 27px;">
+					</td>
+					<td class="comparison">
+						1
+					</td>
+				</tr>
+				<tr class="amenity" id="banks">
+					<td class="measure">
+						2
+					</td>
+					<td class="amenityType">
+						<h2>Banks</h2>
+						<img class="apple" src="{% img "sitegeist/images/banks.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/banks.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/banks.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/banks.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/banks.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/banks.png" %}" style="width: 27px;">
+					</td>
+					<td class="comparison">
+						2
+					</td>
+				</tr>
+				<tr class="amenity" id="shops">
+					<td class="measure">
+						24
+					</td>
+					<td class="amenityType">
+						<h2>Shops</h2>
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+						<img class="apple" src="{% img "sitegeist/images/shops.png" %}" style="width: 27px;">
+					</td>
+					<td class="comparison">
+						6
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="clear"></div>
+	</section>
+	{% endcomment %}
+	<footer class="lightBg" id="sources">
+		<h1>
+			Sources
+		</h1>
+		<ul>
+			<li>
+				<h2>
+					Home values and rental data:
+				</h2>
+				<a href="http://2010.census.gov/2010census/data/">U.S. Census Bureau</a>
+			</li>
+		</ul>
+	</footer>
+	{% include "includes/pane_contact.html" %}
+{% endblock %}

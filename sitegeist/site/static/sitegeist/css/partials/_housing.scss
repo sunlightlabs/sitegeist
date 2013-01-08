@@ -1,0 +1,279 @@
+#housing .lightBg{
+    background-color: #F5F5ED;
+}
+#housing .mediumBg{
+    background-color: #66C500; /*  green  */
+}
+#housing .darkBg{
+    background-color: #3F432F;
+}
+#housing .lightBg h1{
+    color: #3F432F;  /*  green grey  */
+}
+#housing .mediumBg h1, #housing .mediumBg .comparison{
+    color: #F1FAE8;  /*  green white  */
+}
+#housing .darkBg h1, #housing .darkBg .comparison{
+    color: #E8F6D9; /*  darker green white  */
+}
+#housing .comparison {
+    background: url(../../images/house_housing.png) right top no-repeat;
+}
+#housing .lightBg .comparison{
+    background-position: right top;
+}
+#housing .mediumBg .comparison{
+    background-position: right -27px;
+}
+#housing .darkBg .comparison{
+    background-position: right -54px;
+}
+
+
+
+/************  Median House Sale Prices */
+
+section#houseSale {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 6px;
+}
+section#houseSale .comparison{
+    margin-right: 15px;
+}
+section#houseSale h2{
+    // font-weight: ;
+    font-size: 50px;
+    color: #66C500;
+    text-align: center;
+    margin: 0;
+}
+section#houseSale .housingKey{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+
+
+/************  Average Rent */
+
+section#houseRent{
+    padding-left: 0;
+    padding-right: 0;
+}
+section#houseRent .comparison{
+    margin-right: 15px;
+}
+section#houseRent .rentChart{
+    border-radius: 31px;
+    border: 1px solid #BAB6B1;
+    width: 50px;
+    height: 50px;
+    padding: 6px;
+    margin-top: 14px;
+    margin-left: 78px;
+}
+section#houseRent .rentChart, section#houseRent h3{
+    float: left;
+}
+section#houseRent h2 {
+    font-size: 75px;
+    color: #66C500;
+    margin: 0;
+    line-height: .8em;
+    text-align: center;
+    font-weight: 500;
+    border-bottom: 1px dotted #D1D0C6;
+}
+section#houseRent h2 span{
+    font-size: 25px;
+    color: #3F432F;
+    display: block;
+}
+section#houseRent h3{
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0;
+    float: right;
+    width: 50%;
+}
+section#houseRent h3 span{
+    font-size: 17px;
+    display: block;
+}
+
+
+
+/************  School Rating */
+
+section#schools h1 span {
+    font-size: 15px;
+    display: block;
+    font-weight: 300;
+    text-transform: lowercase;
+}
+section#schools .appleChart{
+    background: url(../../images/apples.png) left top no-repeat;
+    width: 152px;
+    height: 67px;
+    padding: 0 2px;
+    float: left;
+    margin: 0 7px 0 10px;
+}
+section#schools .apple{
+    padding: 0 0px;
+    width: 27px;
+    height: 31px;
+    margin: 2px 0;
+}
+section#schools h2{
+    font-size: 100px;
+    font-weight: 300;
+    color: #66C500; /*  green  */
+    letter-spacing: -13px;
+    margin: 0 10px 20px 7px;
+    float: left;
+    line-height: .7;
+}
+section#schools h2 span{
+    font-size: 25px;
+    font-weight: 300;
+    color: #E8F6D9; /*  darker green white  */
+    letter-spacing: normal;
+}
+
+
+
+
+
+
+/************  Average Commute Times */
+
+#housing section#commuteTimes.mediumBg .comparison{
+    background-position: right -17px;
+}
+
+section#commuteTimes .transitType{
+    float: left;
+    width: 25%;
+    text-align: center;
+    overflow: hidden;
+}
+section#commuteTimes h1 span {
+    font-size: 15px;
+    display: block;
+    font-weight: 300;
+    text-transform: lowercase;
+    color: #3F432F;  /*  green grey  */
+}
+section#commuteTimes h2{
+    font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+    color: #F1FAE8;
+    font-weight: 300;
+    font-size: 15px;
+    margin: 0;
+}
+section#commuteTimes .transitType p {
+    margin: 0;
+    font-family: "franklin-gothic-ext-comp-urw", "helvetica neue", helvetica, arial, sans-serif;
+    font-size: 37px;
+    color: #3F432F;  /*  green grey  */
+}
+section#commuteTimes .transitType p span{
+    font-size: 12.5px;
+    text-transform: uppercase;
+    color: #3F432F;  /*  green grey  */
+}
+section#commuteTimes .transitType img{
+    display: block;
+    margin: 0 auto;
+}
+section#commuteTimes img.transitIcon{
+    margin: -17px auto 0 auto;
+    border-bottom: 1px solid #F1FAE8;
+}
+section#commuteTimes #car.transitIcon{
+    display: block;
+}
+section#commuteTimes .comparison{
+    width: 100%;
+    padding: 0;
+    display: table-row;
+}
+section#commuteTimes .comparison p{
+    width: 15%;
+    text-align: center;
+    margin: 0;
+    padding: 0 5%;
+    line-height: 1;
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+
+
+/************  Taxis */
+
+
+section#taxis.lightBg h1{
+    background: url(../../images/taxi.png) right top no-repeat;
+    margin-bottom: 0;
+    padding-bottom: 0.67em;
+}
+
+
+
+
+/************  Walkable Nearby */
+
+section#walkable{
+    padding-left: 0;
+    padding-right: 0;
+}
+#housing section#walkable .comparison{
+    padding-right: 15px;
+    width: 20px;
+    background-position: left -27px;
+}
+section#walkable tbody .comparison{
+    background: none;
+    text-align: center;
+    margin-top: 13px;
+}
+section#walkable table{
+    width: 100%;
+}
+section#walkable thead{
+    text-indent: -9999em;
+}
+section#walkable tbody .measure{
+    color: #3F432F;  /*  green grey  */
+    font-size: 40px;
+    text-align: right;
+    padding: 0 5px;
+    vertical-align: top;
+    line-height: 1;
+    width: 60px;
+    padding-left: 15px;
+}
+section#walkable tbody td{
+    padding-bottom: 10px;
+}
+section#walkable tbody tr{
+    border-bottom: 1px dotted #a3dc6e;
+}
+section#walkable h2{
+    font-size: 20px;
+    font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+    color: #F1FAE8;
+    font-weight: 300;
+    margin: 7px 0 5px 0;
+}
+section#walkable .amenityType{
+    padding-left: 5px;
+    width: 151px;
+}
+section#walkable .amenityType img{
+    padding-bottom: 5px;
+}

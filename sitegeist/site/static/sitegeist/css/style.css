@@ -1,0 +1,86 @@
+/*  General Styles */
+body {
+  background: #F5F5ED;
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "minion", "Times New Roman", sans-serif;
+  color: #938D87;
+  font-size: 15px; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.container {
+  width: 320px;
+  overflow: hidden;
+  margin: 0 auto; }
+
+.clear {
+  clear: both; }
+
+header {
+  background: url(../../images/bg_header.png) center bottom repeat-x;
+  padding-bottom: 6px; }
+  header h1 {
+    color: #34302D;
+    /*  universal grey  */
+    font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center; }
+
+.todo {
+  opacity: 0.3; }
+
+section {
+  padding: 16px 15px 22px 15px;
+  background-image: url(../../images/bg_section.png);
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  position: relative; }
+  section h1 {
+    font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0; }
+
+#sources {
+  font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+  color: #3B3F43;
+  /*  universal grey  */
+  padding: 0 15px 40px 15px; }
+  #sources h1 {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 700;
+    color: #34302D; }
+  #sources h2 {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0; }
+  #sources li {
+    margin-bottom: 1em; }
+
+/* ------------------------  Comparisons  ------------------------ */
+.comparison {
+  padding: 1px 26px 0 0;
+  font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+  font-weight: 300;
+  color: #938D87;
+  font-size: 15px;
+  float: right;
+  margin-top: 15px; }
+  .comparison p {
+    display: inline; }
+  .comparison span.measure {
+    font-style: normal;
+    font-weight: 500; }

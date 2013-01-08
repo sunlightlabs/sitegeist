@@ -1,0 +1,1795 @@
+
+
+/*  General Styles */
+
+body {
+	background: #F5F5ED;
+	margin: 0;
+	padding: 0;
+	font-family: Georgia, "minion", "Times New Roman", sans-serif;
+	color: #938D87;
+	font-size: 15px;
+}
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+p {
+	line-height: 1.6em
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+.container {
+	margin: 0 auto;
+	max-width: 500px;
+}
+.clear{
+	clear: both;
+}
+header{
+	background: url(../images/bg_header.png) center bottom repeat-x;
+	padding-bottom: 6px;
+}
+
+header h1{
+	color: #34302D; /*  universal grey  */
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	font-weight: 500;
+	font-size: 30px;
+	text-align: center;
+}
+.content{
+	// margin-top: ;
+	position: relative;
+}
+.todo { opacity: 0.3; }
+section{
+	padding: 16px 15px 22px 15px;
+	background-image: url(../images/bg_section.png);
+	background-position: center bottom;
+	background-repeat: repeat-x;
+	position: relative;
+}
+section h1{
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 0;
+}
+#sources {
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	color: #3B3F43; /*  universal grey  */
+	padding: 0 15px;
+}
+#sources h1{
+	text-align: left;
+	font-size: 14px;
+	font-weight: 700;
+	color: #34302D;
+}
+#sources h2{
+	text-align: left;
+	font-size: 14px;
+	font-weight: 700;
+	margin: 0;
+}
+#sources li{
+	margin-bottom: 1em;
+
+}
+
+.noData {
+	margin: 50px 10px 0;
+	text-align: center;
+}
+.noData h2{
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	font-size: 15px;
+	color: #423F2F;
+	text-transform: uppercase;
+}
+.noData h2, .noData p {
+	padding: 0 20px;
+}
+
+
+#contactUs p {
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	margin: 0 0.2em;
+	text-align: center;
+	a {
+		text-decoration: underline;
+	}
+}
+.sitegeistLogo{
+	display: block;
+	text-indent: -9999em;
+	width: 200px;
+	height: 50px;
+	background: url(../images/sitegeistLogo.png) left top no-repeat;
+	margin: 0 auto;
+}
+
+
+
+
+
+
+/* ------------------------  People  ------------------------ */
+
+#people .lightBg{
+	background-color: #F5F5ED;
+}
+#people .mediumBg{
+	background-color: #00AAFF;
+}
+#people .darkBg{
+	background-color: #3B3F43;
+}
+#people .lightBg h1{
+	color: #3B3F43;  /*  blue grey  */
+}
+#people .mediumBg h1, #people .mediumBg .comparison{
+	color: #EBEFF8;  /*  blue white  */
+}
+#people .darkBg h1, #people .darkBg .comparison{
+	color: #E5EEF9; /*  darker blue white  */
+}
+#people .comparison {
+	background: url(../images/house_people.png) right top no-repeat;
+}
+#people .lightBg .comparison{
+	background-position: right top;
+}
+#people .mediumBg .comparison{
+	background-position: right -27px;
+}
+#people .darkBg .comparison{
+	background-position: right -54px;
+}
+
+/************  Average Age */
+
+
+#averageAge {
+	font-weight: 400;
+	font-size: 25px;
+	text-align: center;
+}
+#averageAge dl{
+	margin: 0 auto;
+	color: #00AAFF;
+	margin-top: -40px;
+}
+#averageAge dd, #averageAge dt{
+	display: inline;
+	float: none;
+	margin: 0;
+}
+#averageAge dt{
+	font-weight: 400;
+	font-size: 100px;
+	line-height: 1.3em;
+}
+#averageAge dd{
+	font-family: "franklin-gothic-ext-comp-urw", "helvetica neue", helvetica, arial, sans-serif;
+}
+
+
+/************  Age Distribution */
+
+
+section#ageDistribution{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#ageDistribution{
+	position: relative;
+}
+#ageDistribution #ageClusters{
+	color: #EBEFF8;
+	font-family: "franklin-gothic-ext-comp-urw", "helvetica neue", helvetica, arial, sans-serif;
+	font-size: 20px;
+	padding-top: 12px;
+	margin-bottom: 10px;
+}
+#ageDistribution .ageChart{
+	position: absolute;
+	top: 60px;
+	right: 15px;
+	width: 250px;
+}
+#ageDistribution .ageGroup#male, #ageDistribution .ageGroup#female{
+	float: left;
+	width: 50%;
+}
+
+#ageDistribution .ageGroup#male{
+	margin-top: -1px;
+}
+#ageDistribution .ageGroup#male ul{
+	margin-top: 1px;
+}
+#ageDistribution .ageGroup#male li{
+	float: right;
+	clear: both;
+	margin: 1px 1px 2px 1px;
+}
+#ageDistribution .ageGroup#male h2{
+	color: #EBEFF8;
+	text-align: right;
+	padding-right: 5px;
+}
+#ageDistribution .ageGroup#female li{
+	background-color: #3B3F43;  /*  blue grey  */
+	margin: 1px 1px 2px 1px;
+	float: left;
+	clear: both;
+}
+#ageDistribution .ageGroup#female h2{
+	color: #3B3F43;  /*  blue grey  */
+	text-align: left;
+	padding-left: 5px;
+}
+#ageDistribution .ageGroup li {
+	text-indent: -9999em;
+	background-color: #EBEFF8;
+	margin: 2px;
+	height: 12px;
+}
+#ageDistribution h2{
+	margin: 0;
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	font-size: 17px;
+	font-weight: 400;
+}
+#ageDistribution .cluster {
+	display: table-row;
+
+}
+#ageDistribution .cluster span{
+	height: 20px;
+	display: table-cell;
+	width: 305px;
+	vertical-align: bottom;
+	border-bottom: 1px dotted #268bc6;
+	padding-left: 15px;
+}
+#ageDistribution .cluster.two{
+	height: 75px;
+}
+#ageDistribution .cluster.three{
+	height: 105px;
+}
+#ageDistribution .cluster.four{
+	height: 75px;
+}
+#ageDistribution .cluster.five{
+	height: 60px;
+}
+
+
+/************  Children Under Five */
+
+
+section#childrenUnderFive {
+	padding-left: 0;
+	padding-right: 0;
+}
+section#childrenUnderFive .comparison{
+	margin-right: 15px;
+}
+section#childrenUnderFive .bgImage{
+	background: url(../images/baby.png) 219px 11px no-repeat;
+	font-weight: 400;
+	font-size: 25px;
+}
+#childrenUnderFive dl{
+	margin: -20px auto 20px auto;
+	color: #00AAFF;
+}
+#childrenUnderFive dd, #childrenUnderFive dt{
+	display: block;
+	float: none;
+	margin: 0;
+	text-align: center;
+}
+#childrenUnderFive dt{
+	font-weight: 400;
+	font-size: 75px;
+	line-height: 1.3em;
+}
+#childrenUnderFive dd{
+	color: #3B3F43;
+}
+
+
+
+/************  Average Household Income */
+
+
+
+#householdIncome{
+	font-family: "franklin-gothic-ext-comp-urw", "helvetica neue", helvetica, arial, sans-serif;
+}
+#householdIncome dl{
+	margin: 0;
+	width: 290px;
+}
+#householdIncome dd, #householdIncome dt{
+	display: block;
+	float: left;
+	margin: 0;
+}
+#householdIncome dt{
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 1em;
+	color: #EBEFF8;  /*  blue white  */
+	width: 55px;
+	clear: both;
+	border-right: 1px dotted #268bc6;
+	padding: 4px 0;
+	margin-right: 3px;
+}
+#householdIncome dd{
+	color: #3B3F43;
+	font-size: 30px;
+	height: 52px;
+	font-family: Georgia, "minion", "Times New Roman", sans-serif;
+	position: relative;
+	width: 170px;
+}
+#householdIncome dd .visual{
+	text-indent: -9999em;
+	background-color: #3B3F43;  /*  blue grey  */
+	display: block;
+	height: 52px;
+}
+#householdIncome dd .unit{
+	position: absolute;
+	top: 0;
+	margin-left: 10px;
+	text-align: left;
+	margin-top: 4px;
+}
+
+
+
+
+/************  Ethnicity */
+
+
+section#ethnicity{
+	padding-left: 0;
+	padding-right: 0;
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	color: #EBEFF8;  /*  blue white  */
+}
+section#ethnicity .comparison{
+	margin-right: 15px;
+}
+#ethnicity .ethnicityGraph{
+	overflow: hidden;
+	height: 250px;
+	position: relative;
+	text-align: center;
+}
+
+#ethnicity .num-people {
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+
+#ethnicity .labelCircle{
+	-webkit-border-radius: 125px;
+	-moz-border-radius: 125px;
+	border-radius: 125px;
+	width: 250px;
+	height: 250px;
+	margin: 0 auto;
+	background-color: #3B3F43;  /*  blue grey  */
+	position: absolute;
+	top: 80px;
+	left: 50%;
+	margin-left: -125px;
+}
+#ethnicity img#ethnicityPie{
+	margin: 0 auto;
+
+}
+#ethnicity h2{
+	font-weight: 300;
+	font-size: 20px;
+	margin-top: 0;
+}
+#ethnicity .unit{
+	color: #00AAFF;
+	display: block;
+	font-family: Georgia, "minion", "Times New Roman", sans-serif;
+	font-size: 72px;
+}
+#ethnicity .left, #ethnicity .right{
+	font-size: 35px;
+	display: block;
+	position: absolute;
+	font-weight: 700;
+	top: 75px;
+}
+#ethnicity .left{
+	left: 15px;
+}
+#ethnicity .right{
+	right: 15px;
+}
+
+
+
+
+/************  Gender */
+
+section#gender{
+	position: relative;
+}
+#genderPie{
+	float: left;
+	margin-left: 15px;
+	margin-right: 40px;
+	margin-top: 8px;
+}
+#gender .genderCap {
+	position: absolute;
+	top: 62px;
+	left: 52px;
+}
+#gender dl{
+	float: right;
+	width: 102px;
+	margin: 0;
+}
+#gender dd.male{
+	border-bottom: 1px dotted #d1d0c6;
+}
+#gender .male{
+	color: #0AF;
+}
+#gender .female{
+	color: #3B3F43;
+}
+#gender dt{
+	font-size: 30px;
+	font-family: Georgia, "minion", "Times New Roman", sans-serif;
+	width: 100%;
+}
+#gender dd{
+	font-size: 15px;
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	margin-left: 0;
+	padding-bottom: 13px;
+	margin-bottom: 10px;
+}
+
+
+
+
+
+
+/************  Political Contributions */
+
+section#politicalContribs{
+	padding-left: 0;
+	padding-right: 0;
+}
+section#politicalContribs .comparison{
+	margin-right: 15px;
+}
+#politicalContribs #partyMajority {
+	background: url(../images/politicalScale.png) center bottom no-repeat;
+	padding-bottom: 19px;
+	text-align: center;
+}
+#politicalContribs dt{
+	width: 50%;
+	color: #3B3F43;
+	text-align: center;
+	font-size: 15px;
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+}
+#politicalContribs dd{
+	font-size: 30px;
+	font-family: Georgia, "minion", "Times New Roman", sans-serif;
+	color: #3B3F43;
+	width: 50%;
+	text-align: center;
+	margin-left: 0;
+}
+#politicalContribs .rep{
+	float: left;
+}
+#politicalContribs .dem{
+	float: right;
+	margin-top: -20px;
+}
+#politicalContribs dd.rep, #politicalContribs dd.dem {
+	clear: both;
+}
+#politicalContribs dd.dem {
+	margin-top: -42px;
+}
+
+img.lean-dem {
+	-webkit-transform: rotate(3deg);
+	   -moz-transform: rotate(3deg);
+	    -ms-transform: rotate(3deg);
+	     -o-transform: rotate(3deg);
+	        transform: rotate(3deg);
+}
+img.lean-rep {
+	-webkit-transform: rotate(-3deg);
+	   -moz-transform: rotate(-3deg);
+	    -ms-transform: rotate(-3deg);
+	     -o-transform: rotate(-3deg);
+	        transform: rotate(-3deg);
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------------------  Housing  ------------------------ */
+
+#housing .lightBg{
+	background-color: #F5F5ED;
+}
+#housing .mediumBg{
+	background-color: #66C500; /*  green  */
+}
+#housing .darkBg{
+	background-color: #3F432F;
+}
+#housing .lightBg h1{
+	color: #3F432F;  /*  green grey  */
+}
+#housing .mediumBg h1, #housing .mediumBg .comparison{
+	color: #F1FAE8;  /*  green white  */
+}
+#housing .darkBg h1, #housing .darkBg .comparison{
+	color: #E8F6D9; /*  darker green white  */
+}
+#housing .comparison {
+	background: url(../images/house_housing.png) right top no-repeat;
+}
+#housing .lightBg .comparison{
+	background-position: right top;
+}
+#housing .mediumBg .comparison{
+	background-position: right -27px;
+}
+#housing .darkBg .comparison{
+	background-position: right -54px;
+}
+
+
+
+/************  Median House Sale Prices */
+
+section#houseSale {
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 6px;
+}
+section#houseSale .comparison{
+	margin-right: 15px;
+}
+section#houseSale h2{
+	font-size: 50px;
+	color: #66C500;
+	text-align: center;
+	margin: 0 0 20px 0;
+}
+section#houseSale .housingKey{
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+	width: auto;
+}
+section#houseSale img{
+	width: 100%;
+}
+
+
+
+/************  Average Rent */
+
+section#houseRent{
+	padding-left: 0;
+	padding-right: 0;
+}
+section#houseRent .comparison{
+	margin-right: 15px;
+}
+section#houseRent .rentChart{
+	margin-top: 14px;
+	margin-left: 38px;
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+}
+section#houseRent .rentChart, section#houseRent h3{
+	float: left;
+}
+section#houseRent h2 {
+	font-size: 50px;
+	color: #66C500;
+	margin: 0 0 10px 0;
+	line-height: .8em;
+	text-align: center;
+	font-weight: 500;
+	border-bottom: 1px dotted #D1D0C6;
+}
+section#houseRent h2 span{
+	font-size: 25px;
+	color: #3F432F;
+	display: block;
+}
+section#houseRent h3{
+	font-size: 60px;
+	font-weight: 500;
+	margin: 0;
+	float: right;
+	font-size: 60px;
+	width: 50%;
+}
+section#houseRent h3 span{
+	font-size: 17px;
+	display: block;
+}
+
+
+
+/************  School Rating */
+
+section#schools h1 span {
+	font-size: 15px;
+	display: block;
+	font-weight: 300;
+	text-transform: lowercase;
+}
+section#schools .comparison{
+	clear: both;
+}
+section#schools .appleChart{
+	background: url(../images/apples.png) left top no-repeat;
+	width: 152px;
+	height: 67px;
+	padding: 0 2px;
+	float: left;
+	margin: 0 7px 0 10px;
+}
+section#schools .apple{
+	padding: 0 0px;
+	width: 27px;
+	height: 31px;
+	margin: 2px 0;
+}
+section#schools h2{
+	font-size: 100px;
+	font-weight: 300;
+	color: #66C500; /*  green  */
+	letter-spacing: -13px;
+	margin: 0 10px 20px 7px;
+	float: right;
+	line-height: .7;
+}
+section#schools h2 span{
+	font-size: 25px;
+	font-weight: 300;
+	color: #E8F6D9; /*  darker green white  */
+	letter-spacing: normal;
+}
+
+
+
+
+
+
+/************  Average Commute Times */
+
+#housing section#commuteTimes.mediumBg .comparison{
+	background-position: right -26px;
+}
+
+section#commuteTimes .transitType{
+	float: left;
+	width: 25%;
+	text-align: center;
+	overflow: hidden;
+}
+section#commuteTimes h1 span {
+	font-size: 15px;
+	display: block;
+	font-weight: 300;
+	text-transform: lowercase;
+	color: #3F432F;  /*  green grey  */
+}
+section#commuteTimes h2{
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	color: #F1FAE8;
+	font-weight: 300;
+	font-size: 15px;
+	margin: 0;
+}
+section#commuteTimes .transitType p {
+	margin: 0;
+	font-family: "franklin-gothic-ext-comp-urw", "helvetica neue", helvetica, arial, sans-serif;
+	font-size: 37px;
+	color: #3F432F;  /*  green grey  */
+}
+section#commuteTimes .transitType p span{
+	font-size: 25px;
+	text-transform: uppercase;
+	color: #3F432F;  /*  green grey  */
+}
+section#commuteTimes .transitType img{
+	display: block;
+	margin: 0 auto;
+}
+section#commuteTimes img.transitIcon{
+	margin: 0 auto;
+	border-bottom: 1px solid #F1FAE8;
+}
+section#commuteTimes #car.transitIcon{
+	display: block;
+}
+section#commuteTimes .comparison{
+	width: 100%;
+	padding: 0;
+	display: table-row;
+}
+section#commuteTimes .comparison p{
+	width: 15%;
+	text-align: center;
+	margin: 0;
+	padding: 6px 5% 0 5%;
+	line-height: 1;
+	display: table-cell;
+	vertical-align: bottom;
+}
+
+
+
+/************  Taxis */
+
+
+section#taxis.lightBg h1{
+	background: url(../images/taxi.png) right top no-repeat;
+	margin-bottom: 0;
+	padding-bottom: 0.67em;
+}
+
+
+
+
+/************  Walkable Nearby */
+
+section#walkable{
+	padding-left: 0;
+	padding-right: 0;
+}
+#housing section#walkable .comparison{
+	padding-right: 15px;
+	width: 20px;
+	background-position: left -27px;
+}
+section#walkable tbody .comparison{
+	background: none;
+	text-align: center;
+	margin-top: 13px;
+}
+section#walkable table{
+	width: 100%;
+}
+section#walkable thead{
+	text-indent: -9999em;
+}
+section#walkable tbody .measure{
+	color: #3F432F;  /*  green grey  */
+	font-size: 40px;
+	text-align: right;
+	padding: 0 5px;
+	vertical-align: top;
+	line-height: 1;
+	width: 60px;
+	padding-left: 15px;
+}
+section#walkable tbody td{
+	padding-bottom: 10px;
+}
+section#walkable tbody tr{
+	border-bottom: 1px dotted #a3dc6e;
+}
+section#walkable h2{
+	font-size: 20px;
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	color: #F1FAE8;
+	font-weight: 300;
+	margin: 7px 0 5px 0;
+}
+section#walkable .amenityType{
+	padding-left: 5px;
+	width: 151px;
+}
+section#walkable .amenityType img{
+	padding-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------  Fun  ------------------------ */
+
+#fun .lightBg{
+	background-color: #F5F5ED;
+}
+#fun .mediumBg{
+	background-color: #FF5640; /*  red  */
+}
+#fun .darkBg{
+	background-color: #453B39;
+}
+#fun .lightBg h1{
+	color: #453B39;  /*  red grey  */
+}
+#fun .mediumBg h1, #fun .mediumBg .comparison{
+	color: #FFF1EB;  /*  red white  */
+}
+#fun .darkBg h1, #fun .darkBg .comparison{
+	color: #FEE8E0; /*  darker red white  */
+}
+#fun .comparison {
+	background: url(../images/house_fun.png) right top no-repeat;
+}
+#fun .lightBg .comparison{
+	background-position: right top;
+}
+#fun .mediumBg .comparison{
+	background-position: right -27px;
+}
+#fun .darkBg .comparison{
+	background-position: right -54px;
+}
+
+
+
+/************  Walkable Nearby */
+
+section#places{
+	padding-left: 0;
+	padding-right: 0;
+}
+section#places .comparison{
+	margin-right: 15px;
+}
+section#places .place{
+	border-bottom: 1px dotted #D1D0C6 ;
+	padding-top: 15px;
+}
+section#places .proximity{
+	background: url(../images/arrow.png) center top no-repeat;
+	padding-top: 30px;
+	float: left;
+	width: 65px;
+	color: #453B39;  /*  red grey  */
+	text-align: center;
+}
+section#places .distance{
+	font-size: 25px;
+	display: block;
+}
+section#places .placeName{
+	padding-left: 1em;
+	padding-right: 1em;
+	float: left;
+}
+section#places h2{
+	font-size: 27px;
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	color: #FF5640;
+	margin: 0;
+	line-height: 1.1;
+}
+section#places p.details{
+	margin-top: 0;
+}
+
+
+
+
+/************  Restaurants by Price */
+
+section#restaurants{
+
+}
+section#restaurants h1 span{
+	font-size: 15px;
+	display: block;
+	font-weight: 300;
+	text-transform: lowercase;
+	color: #453B39;  /*  red grey  */
+}
+
+
+
+
+
+/************  Most Foursquare Checkins */
+
+section#foursquare h1 span{
+	font-size: 15px;
+	display: block;
+	font-weight: 300;
+	text-transform: lowercase;
+}
+section#foursquare h2{
+	font-size: 75px;
+	color: #FEE8E0; /*  darker red white  */
+	font-weight: 300;
+	text-align: center;
+	margin: 0;
+	line-height: .9;
+}
+section#foursquare h2 span{
+	font-size: 25px;
+	display: block;
+	margin: 20px;
+}
+section#foursquare .location{
+	color: #FF5640; /*  red  */
+	text-align: center;
+	margin: 0;
+	font-size: 30px;
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	font-weight: 300;
+	display: block;
+}
+section#foursquare .comparison .measure{
+	color: #FF5640; /*  red  */
+}
+
+
+
+
+
+/************  Movie Theaters within 5 miles */
+section#theaters {
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+}
+section#theaters .comparison{
+	margin-right: 15px;
+}
+
+section#theaters .bgImage {
+	background: url(../images/bg_theaters.png) left 40px no-repeat;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 15px;
+}
+section#theaters h1 span{
+	font-size: 15px;
+	display: block;
+	font-weight: 300;
+	text-transform: lowercase;
+	color: #453B39;  /*  red grey  */
+}
+section#theaters h2#numberOfTheaters{
+	font-size: 75px;
+	color: #FFF1EB;  /*  red white  */
+	font-weight: 300;
+	text-align: right;
+	margin: -20px 0 0;
+	line-height: 1;
+}
+section#theaters h2 span{
+	font-size: 25px;
+}
+section#theaters .location{
+	color: #FF5640; /*  red  */
+	text-align: center;
+	margin: 0;
+	font-size: 30px;
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	font-weight: 300;
+	display: block;
+}
+section#theaters ul{
+
+}
+section#theaters li{
+	background: url(../images/theaterMarker.png) left center no-repeat;
+	padding-left: 40px;
+	color: #453B39;  /*  red grey  */
+	margin-left: 21px;
+	font-size: 15px;
+}
+section#theaters li{
+
+}
+section#theaters li .measure{
+	font-size: 25px;
+	font-family: "franklin-gothic-ext-comp-urw", "helvetica neue", helvetica, arial, sans-serif;
+	font-weight: 300;
+	color: #FFF1EB;  /*  red white  */
+	padding-right: 8px;
+}
+
+
+
+
+
+/************  Local Flavor */
+
+section#flavor{
+	padding-left: 0;
+	padding-right: 0;
+}
+section#flavor .comparison{
+	margin-right: 15px;
+}
+section#flavor .topPick{
+	margin-bottom: 15px;
+}
+section#flavor img.photo{
+	float: left;
+}
+section#flavor h1 span{
+	font-size: 15px;
+	display: block;
+	font-weight: 300;
+	text-transform: lowercase;
+}
+section#flavor h2{
+	font-size: 27px;
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	color: #FF5640; /*  red  */
+	line-height: 1.1;
+	margin: 5px 15px 2px 15px;
+	float: left;
+	width: 186px;
+}
+section#flavor .imgContainer{
+	width: 100%;
+	height: 100px;
+	position: relative;
+	overflow: hidden;
+}
+section#flavor .imgContainer img{
+	width: 100%;
+}
+section#flavor .imgContainer span{
+	position: absolute;
+	font-size: 190px;
+	top: 0;
+	right: 0;
+	color: #F5F5ED;
+	line-height: 1;
+}
+section#flavor .one .imgContainer span{
+	font-size: 191px;
+	top: -59px;
+	right: -7px;
+}
+section#flavor .two .imgContainer span{
+	font-size: 191px;
+	top: -61px;
+	right: -15px;
+}
+section#flavor .three .imgContainer span{
+	font-size: 142px;
+	top: -44px;
+	right: -8px;
+}
+section#flavor .four .imgContainer span{
+	font-size: 142px;
+	top: -44px;
+	right: -8px;
+}
+section#flavor .five .imgContainer span{
+	font-size: 144px;
+	top: -47px;
+	right: -10px;
+}
+section#flavor .opinion{
+	float: right;
+	padding-top: 9px;
+	margin-bottom: 20px;
+}
+section#flavor .rating{
+	text-indent: -9999em;
+	display: block;
+	width: 100px;
+	height: 20px;
+}
+section#flavor .reviews{
+	display: block;
+	width: 100px;
+	text-align: right;
+}
+section#flavor .yelp-rating{
+	padding-left: 15px;
+}
+section#flavor .starsOne{
+	background: url(../images/stars_one.png) left center no-repeat;
+}
+section#flavor .starsOne_half{
+	background: url(../images/stars_one_half.png) left center no-repeat;
+}
+section#flavor .starsTwo{
+	background: url(../images/stars_two.png) left center no-repeat;
+}
+section#flavor .starsTwo_half{
+	background: url(../images/stars_two_half.png) left center no-repeat;
+}
+section#flavor .starsThree{
+	background: url(../images/stars_three.png) left center no-repeat;
+}
+section#flavor .starsThree_half{
+	background: url(../images/stars_three_half.png) left center no-repeat;
+}
+section#flavor .starsFour{
+	background: url(../images/stars_four.png) left center no-repeat;
+}
+section#flavor .starsFour_half{
+	background: url(../images/stars_four_half.png) left center no-repeat;
+}
+section#flavor .starsFive{
+	background: url(../images/stars_five.png) left center no-repeat;
+}
+
+
+
+
+/* ------------------------  Environment  ------------------------ */
+
+#environment .lightBg{
+	background-color: #F5F5ED;
+}
+#environment .mediumBg{
+	background-color: #FFD400; /*  yellow  */
+}
+#environment .darkBg{
+	background-color: #423F2F;
+}
+#environment .lightBg h1{
+	color: #423F2F;  /*  yellow grey  */
+}
+#environment .mediumBg h1{
+	color: #FFFEF2;  /*  yellow white  */
+}
+#environment .mediumBg h1 span, #environment .mediumBg .comparison{
+	color: #423F2F;  /*  yellow grey  */
+}
+#environment .darkBg h1, #environment .darkBg .comparison{
+	color: #FFFEE6; /*  darker yellow white  */
+}
+#environment .comparison {
+	background: url(../images/house_environment.png) right top no-repeat;
+}
+#environment .lightBg .comparison{
+	background-position: right top;
+}
+#environment .mediumBg .comparison{
+	background-position: right center;
+}
+#environment .darkBg .comparison{
+	background-position: right -54px;
+}
+#environment .content #weatherNow{
+	margin-top: -14px;
+	position: relative;
+	padding-top: 0;
+}
+#environment.superfund .ooze{
+	background: url(../images/superfund.png) center top no-repeat;
+	height: 114px;
+	position: absolute;
+	z-index: 10;
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	font-size: 15px;
+	padding-top: 8px;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+#environment.superfund .ooze h2{
+	text-transform: uppercase;
+	display: block;
+	float: left;
+	margin: 0 0 0 64px;
+	font-size: 15px;
+	font-weight: normal;
+	color: #FFFEE6; /*  darker yellow white  */
+	width: 63px;
+
+}
+#environment.superfund .ooze p{
+	display: block;
+	float: left;
+	margin: 0 0 0 10px;
+	color: #FFFEE6; /*  darker yellow white  */
+	width: 183px;
+	line-height: 1.2;
+}
+#environment.superfund .ooze p em{
+	color: #FFD400; /*  yellow  */
+	font-style: normal;
+}
+#environment.superfund #weatherNow .bgImage{
+	padding-top: 55px;
+	background-position: -25px 18px;
+}
+
+
+
+
+
+
+
+/************  Weather Right Now */
+
+section#weatherNow .bgImage {
+	background: url(../images/bg_currentWeather_cloud.png) left top no-repeat;
+	text-align: center;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+section#weatherNow .bgImage.sun {
+	background: url(../images/bg_currentWeather_sun.png) left top no-repeat;
+}
+section#weatherNow .bgImage.sleet {
+	background: url(../images/bg_currentWeather_sleet.png) left top no-repeat;
+}
+section#weatherNow .bgImage.rain {
+	background: url(../images/bg_currentWeather_rain.png) left top no-repeat;
+}
+section#weatherNow .bgImage.cloud {
+	background: url(../images/bg_currentWeather_cloud.png) left top no-repeat;
+}
+
+section#weatherNow{
+	padding-left: 0;
+	padding-right: 0;
+}
+section#weatherNow p{
+	color: #FFFEF2;  /*  yellow white  */
+}
+#environment section#weatherNow h1{
+	color: #423F2F;  /*  yellow grey  */
+	padding-top: 16px;
+}
+section#weatherNow h1 span{
+	font-size: 15px;
+	display: block;
+	font-weight: 300;
+	text-transform: lowercase;
+}
+section#weatherNow .comparison{
+	margin-top: 30px;
+}
+section#weatherNow h2{
+	font-size: 75px;
+	color: #FFFEF2;  /*  yellow white  */
+	line-height: 1;
+	text-align: center;
+	margin: 0;
+	font-weight: 300;
+	margin-bottom: 20px;
+}
+section#weatherNow .climateDesc{
+	text-transform: uppercase;
+	font-size: 15px;
+	text-align: center;
+	display: block;
+	color: #423F2F;  /*  yellow grey  */
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	font-weight: 500;
+}
+section#weatherNow .rainPercent{
+	background: url(../images/rainPercent.png) right top no-repeat;
+	width: 49px;
+	text-align: center;
+	display: block;
+	font-size: 30px;
+	color: #423F2F;  /*  yellow grey  */
+	padding: 41px 70px 18px 6px;
+	margin: 0 auto;
+}
+
+section#weatherNow .high.monthlyTemps, section#weatherNow .low.monthlyTemps {
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+section#weatherNow .monthlyTemps h2, section#weatherNow .monthlyTemps h2 {
+	color: #423F2F;  /*  yellow grey  */
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	font-weight: 500;
+	font-size: 30px;
+	text-transform: uppercase;
+	margin: 0;
+	line-height: inherit;
+}
+section#weatherNow .high.monthlyTemps p, section#weatherNow .low.monthlyTemps p{
+	margin-top: -10px;
+}
+section#weatherNow .high.monthlyTemps p span, section#weatherNow .low.monthlyTemps p span{
+	display: block;
+	font-size: 17px;
+	color: #938D87;
+}
+section#weatherNow .high.monthlyTemps, section#weatherNow .low.monthlyTemps{
+	font-size: 30px;
+	color: #FFFEF2; /*  yellow  */
+}
+section#weatherNow .high.monthlyTemps {
+	background: url(../images/high.png) left 10px no-repeat;
+}
+section#weatherNow .low.monthlyTemps {
+	background: url(../images/low.png) right 10px no-repeat;
+}
+
+
+
+
+
+
+
+
+
+/************  Record Temperatures */
+
+section#recordTemps{
+	text-align: center;
+}
+section#recordTemps h1 span{
+	font-size: 15px;
+	display: block;
+	font-weight: 300;
+	text-transform: lowercase;
+}
+section#recordTemps .high, section#recordTemps .low {
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+section#recordTemps h2, section#recordTemps h2 {
+	color: #423F2F;  /*  yellow grey  */
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	font-weight: 500;
+	font-size: 30px;
+	text-transform: uppercase;
+	margin: 0;
+}
+section#recordTemps .high p, section#recordTemps .low p{
+	margin-top: -10px;
+}
+section#recordTemps .high p span, section#recordTemps .low p span{
+	display: block;
+	font-size: 17px;
+	color: #938D87;
+}
+section#recordTemps .high, section#recordTemps .low{
+	font-size: 30px;
+	color: #FFD400; /*  yellow  */
+}
+section#recordTemps .high {
+	background: url(../images/high.png) left 10px no-repeat;
+}
+section#recordTemps .low {
+	background: url(../images/low.png) right 10px no-repeat;
+}
+
+
+
+
+/************  Monthly Temperatures */
+
+section#monthlyTemps{
+
+
+}
+section#monthlyTemps h1 span {
+	font-size: 15px;
+	display: block;
+	font-weight: 300;
+	text-transform: lowercase;
+}
+
+
+
+
+
+
+/************  Pollen Levels */
+section#pollen .bgImage{
+	background: url('../images/pollen.png') left top no-repeat;
+}
+section#pollen{
+	padding-left: 0;
+	padding-right: 0;
+}
+section#pollen h1 span {
+	font-size: 15px;
+	display: block;
+	font-weight: 300;
+	text-transform: lowercase;
+}
+section#pollen .comparison{
+	margin-right: 15px;
+}
+section#pollen .pollenCat{
+	background: url('../images/pollen_bg.png') center top no-repeat;
+	width: 33.33333333%;
+	float: left;
+	text-align: center;
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	color: #FFFEF2;  /*  yellow white  */
+	position: relative;
+}
+section#pollen .pollenCat span{
+	font-size: 25px;
+	font-weight: 300;
+	margin-top:2px;
+}
+section#pollen img{
+	margin-top: -50px;
+}
+section#pollen h2{
+	font-size: 15px;
+	font-weight: 300;
+}
+section#pollen .high .high, section#pollen .low .low{
+	display: block;
+}
+section#pollen .high .low, section#pollen .low .high{
+	display: none;
+}
+section#pollen .predominant{
+	border-top: 1px dotted #88867d;
+	text-align: center;
+}
+section#pollen .predominant h3{
+	font-size: 15px;
+	color: #FFD400; /*  yellow  */
+	text-transform: uppercase;
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	font-weight: 300;
+	margin-bottom: 0;
+}
+section#pollen .predominant li{
+	display: inline;
+	font-size: 24px;
+	color: #FFFEE6; /*  darker yellow white  */
+	font-weight: 300;
+}
+
+
+
+
+
+/************  Air Quality */
+
+section#air{
+	background: url('../images/pollen.png') left top no-repeat;
+}
+section#air h2 {
+	text-align: center;
+	color: #423F2F;  /*  yellow grey  */
+	font-weight: 300;
+	margin: -20px 0 15px 0;
+}
+section#air h2 span{
+	text-align: center;
+	font-size: 75px;
+	display: block;
+	color: #423F2F;  /*  yellow grey  */
+	font-weight: 700;
+}
+section#air .airChart {
+	color: #FFFEF2;  /*  yellow white  */
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+}
+section#air .airChart .bar{
+	position: relative;
+	background-color: #FFFEF2;  /*  yellow white  */
+	height: 9px;
+	width: 100%;
+}
+section#air .airChart .bar img{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+section#air .airChart span.measure{
+	width: 25%;
+	background-color: #423F2F;  /*  yellow grey  */
+	text-indent: -9999em;
+	display: block;
+	height: 9px;
+}
+section#air h1 span {
+	font-size: 15px;
+	display: block;
+	font-weight: 300;
+	text-transform: lowercase;
+}
+section#air .definition span{
+	display: block;
+	width: 33.333333%;
+	float: left;
+}
+section#air .scale span{
+	display: block;
+	width: 50%;
+	float: left;
+}
+section#air .middleUnit {
+	text-align: center;
+}
+section#air .lastUnit{
+	text-align: right;
+}
+
+
+
+
+
+
+
+
+/* ------------------------  History  ------------------------ */
+
+#history .lightBg{
+	background-color: #F5F5ED;
+}
+#history .mediumBg{
+	background-color: #7B6490; /*  purple  */
+}
+#history .darkBg{
+	background-color: #414046;
+}
+#history .lightBg h1{
+	color: #414046;  /*  purple grey  */
+}
+#history .mediumBg h1, #history .mediumBg .comparison{
+	color: #F5F2F7;  /*  purple white  */
+}
+#history .darkBg h1, #history .darkBg .comparison{
+	color: #EFECF1; /*  darker purple white  */
+}
+#history .comparison {
+	background: url(../images/house_fun.png) right top no-repeat;
+}
+#history .lightBg .comparison{
+	background-position: right top;
+}
+#history .mediumBg .comparison{
+	background-position: right -27px;
+}
+#history .darkBg .comparison{
+	background-position: right -54px;
+}
+#history .content {
+	margin-top: -14px;
+}
+
+#history h1 span {
+	font-size: 15px;
+	display: block;
+	font-weight: 300;
+	text-transform: lowercase;
+}
+
+
+
+
+/************  House Age */
+
+
+section#houseAge h2{
+	font-size: 75px;
+	color: #7B6490;  /*  purple  */
+	line-height: 1;
+	text-align: center;
+	margin: 0;
+	font-weight: 300;
+	margin-bottom: 20px;
+}
+
+
+
+/************  Population */
+
+section#pop{
+	padding-left: 0;
+	padding-right: 0;
+}
+section#pop h2{
+	display: block;
+	border-top: 1px dotted #675875;
+	border-bottom: 1px dotted #675875;
+	font-size: 75px;
+	font-family: "minion Pro", Georgia, "Times New Roman", sans-serif;
+	text-align: right;
+	padding-right: 15px;
+	font-weight: 300;
+	color: #F5F2F7;  /*  purple white  */
+	background: #766289; /* Old browsers */
+	background: -moz-linear-gradient(top,  #766289 0%, #79658d 24%, #79658d 50%, #79658d 79%, #766289 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#766289), color-stop(24%,#79658d), color-stop(50%,#79658d), color-stop(79%,#79658d), color-stop(100%,#766289)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #766289 0%,#79658d 24%,#79658d 50%,#79658d 79%,#766289 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #766289 0%,#79658d 24%,#79658d 50%,#79658d 79%,#766289 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #766289 0%,#79658d 24%,#79658d 50%,#79658d 79%,#766289 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #766289 0%,#79658d 24%,#79658d 50%,#79658d 79%,#766289 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#766289', endColorstr='#766289',GradientType=0 ); /* IE6-9 */
+}
+section#pop .populationTicker{
+	overflow: hidden;
+	height: 107px;
+	margin-bottom: 10px;
+}
+section#pop .populationTicker span{
+	display: block;
+	font-size: 75px;
+	font-family: "minion Pro", Georgia, "Times New Roman", sans-serif;
+	text-align: right;
+	padding-right: 15px;
+	font-weight: 300;
+	color: #F5F2F7;  /*  purple white  */
+}
+section#pop .populationTicker span.numberBefore{
+	margin-top: -55px;
+}
+section#pop h2{
+	margin: -50px 0;
+}
+
+
+
+
+
+
+/************  Population History */
+
+section#popHistory{
+	padding-left: 0;
+	padding-right: 0;
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+}
+section#popHistory h2{
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	text-align: center;
+}
+section#popHistory dl{
+	margin: 0 auto 15px auto;
+	display: block;
+	width: 195px;
+	font-size: 17px;
+}
+section#popHistory dd, section#popHistory dt{
+	display: block;
+	float: left;
+	margin-left: 0;
+}
+section#popHistory dt {
+	text-indent: -9999em;
+	display: block;
+	margin-top: 2px;
+	margin-right: 5px;
+}
+section#popHistory dd {
+}
+section#popHistory dt.current{
+	background-color: #7B6490; /*  purple  */
+	width: 15px;
+	height: 15px;
+	border-radius: 8px;
+}
+section#popHistory dt.home{
+	border: 2px solid #414046;  /*  purple grey  */
+	width:11px;
+	height: 11px;
+	border-radius: 7px;
+	margin-left: 10px;
+}
+section#popHistory img{
+	width: 100%;
+}
+
+
+
+
+/************  Nearby Historic Landmarks */
+
+section#nearbyHistory .barChart li {
+	background: #7B6490; /*  purple  */
+	margin: 3px 0;
+	color: #F5F2F7;  /*  purple white  */
+	height: 60px;
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	font-weight: 300;
+}
+section#nearbyHistory .barChart .measure{
+	display: block;
+	font-size: 30px;
+	font-family: Georgia, "minion", "Times New Roman", sans-serif;
+	margin-bottom: -5px;
+	font-weight: 300;
+}
+section#nearbyHistory .barChart .location{
+	width: 290px;
+	display: block;
+	padding: 0 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------  Comparisons  ------------------------ */
+
+
+
+.comparison {
+	padding: 1px 26px 0 0;
+	font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+	font-weight: 300;
+	color: #938D87;
+	font-size: 15px;
+	float: right;
+	margin-top: 15px;
+}
+.comparison span.measure{
+	font-style: normal;
+	font-weight: 500;
+}
+.comparison p{
+	display: inline;
+}
+
+
+
+

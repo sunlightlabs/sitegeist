@@ -1,0 +1,250 @@
+{% extends "sitegeist/panes/_base.html" %}
+{% load imgs %}
+
+{% block id %}environment{% endblock %}
+{% block class %}{% if data.contaminated %}superfund{% endif %}{% endblock %}
+
+{% block heading %}Environment{% endblock %}
+
+{% block content %}
+	{% if data.contaminated %}
+		<div class="ooze">
+			<h2>
+				Caution:
+			</h2>
+			<p>
+				<a href="{{ data.contaminated.url }}">
+					You are within {{ data.contaminated.distance }} miles of a <em>contaminated</em> site!
+				</a>
+			</p>
+			<div class="clear"></div>
+		</div>
+	{% endif %}
+	<section class="mediumBg" id="weatherNow">
+		<div class="bgImage {{ data.darksky.forecast_code }}">
+			<h1>
+				Weather
+				<span>Right now</span>
+			</h1>
+			<h2>
+				<span class="measure">{{ data.darksky.currentTemp }}&deg;F</span>
+				<span class="climateDesc">{{ data.darksky.hourSummary }}</span>
+			</h2>
+			<h1>Average Temps for Today</h1>
+			<div class="high monthlyTemps">
+				<h2>
+					High
+				</h2>
+				<p>
+					{{ data.wunderground.temp_high.normal.F }}&deg;F
+				</p>
+			</div>
+			<div class="low monthlyTemps">
+				<h2>
+					Low
+				</h2>
+				<p>
+					{{ data.wunderground.temp_low.normal.F }}&deg;F
+				</p>
+			</div>
+
+			<p><a href="http://darkskyapp.com/">Powered by Dark Sky</a></p>
+			<!--
+			<span class="rainPercent">100</span>
+			-->
+			<!--
+			<div class="comparison">
+				<p>
+					Now
+					<span class="measure">54&deg;</span>
+				</p>
+				<p>
+					High
+					<span class="measure">59&deg;</span>
+				</p>
+				<p>
+					Low
+					<span class="measure">37&deg;</span>
+				</p>
+				<div class="clear"></div>
+			</div>
+			-->
+			<div class="clear"></div>
+		</div>
+	</section>
+	{% if data.wunderground %}
+		<section class="lightBg" id="recordTemps">
+			<h1>
+				Record Temperatures
+				<span>For today</span>
+			</h1>
+			<div class="high">
+				<h2>
+					High
+				</h2>
+				<p>
+					{{ data.wunderground.temp_high.record.F }}&deg;F
+					<span>{{ data.wunderground.temp_high.recordyear }}</span>
+				</p>
+			</div>
+			<div class="low">
+				<h2>
+					Low
+				</h2>
+				<p>
+					{{ data.wunderground.temp_low.record.F }}&deg;F
+					<span>{{ data.wunderground.temp_low.recordyear }}</span>
+				</p>
+			</div>
+			{% comment %}
+			<div class="comparison">
+				<p>
+					Record High
+					<span class="measure">97&deg;</span>
+				</p>
+				<p>
+					Low
+					<span class="measure">-12&deg;</span>
+				</p>
+				<div class="clear"></div>
+			</div>
+			{% endcomment %}
+			<div class="clear"></div>
+			<img src="{% inlineimg "sitegeist/images/wundergroundLogo_black_horz.png" %}">
+		</section>
+	{% endif %}
+	{% comment %}
+	<section class="darkBg todo" id="pollen">
+		<div class="bgImage">
+			<h1>
+				Pollen Levels
+			</h1>
+			<div class="mold pollenCat low">
+				<span class="low">Low</span>
+				<span class="high">High</span>
+				<img src="{% inlineimg "sitegeist/images/pollen_measure.png" %}" style="width: 106px;">
+				<h2>
+					Mold
+				</h2>
+			</div>
+			<div class="tree pollenCat high">
+				<span class="low">Low</span>
+				<span class="high">High</span>
+				<img src="{% inlineimg "sitegeist/images/pollen_measure.png" %}" style="width: 106px;">
+				<h2>
+					Tree
+				</h2>
+			</div>
+			<div class="weed pollenCat low">
+				<span class="low">Low</span>
+				<span class="high">High</span>
+				<img src="{% inlineimg "sitegeist/images/pollen_measure.png" %}" style="width: 106px;">
+				<h2>
+					Weed
+				</h2>
+			</div>
+			<div class="clear"></div>
+			<div class="predominant">
+				<h3>
+					Predominant Pollen
+				</h3>
+				<ul>
+					<li>
+						Oak
+					</li>
+					<li>
+						Birch
+					</li>
+					<li>
+						Maple
+					</li>
+				</ul>
+			</div>
+			<div class="comparison">
+				<p>
+					Mold
+					<span class="measure">Low</span>
+				</p>
+				<p>
+					Tree
+					<span class="measure">Low</span>
+				</p>
+				<p>
+					Weed
+					<span class="measure">High</span>
+				</p>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</section>
+	<section class="mediumBg todo" id="air">
+		<h1>
+			Air Quality
+			<span>Median Air Quality Index</span>
+		</h1>
+		<h2>
+			<span class="">75</span>
+			(good)
+		</h2>
+		<div class="airChart">
+			<div class="scale clearfix">
+				<span>0</span>
+				<span class="lastUnit">500</span>
+			</div>
+			<div class="bar">
+				<span class="measure">25%</span>
+				<img src="{% inlineimg "sitegeist/images/airBreaks.png" %}" style="width: 290px;">
+			</div>
+			<div class="definition">
+				<span class="good">Good</span>
+				<span class="middleUnit">Unhealthful</span>
+				<span class="lastUnit">Hazardous</span>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="comparison">
+			<p>
+				Mold
+				<span class="measure">Low</span>
+			</p>
+			<p>
+				Tree
+				<span class="measure">Low</span>
+			</p>
+			<p>
+				Weed
+				<span class="measure">High</span>
+			</p>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	</section>
+	{% endcomment %}
+	<footer class="lightBg" id="sources">
+		<h1>
+			Sources
+		</h1>
+		<ul>
+			<li>
+				<h2>
+					Current Weather and Forecast:
+				</h2>
+				<a href="http://darkskyapp.com/">Dark Sky</a>
+			</li>
+			<li>
+				<h2>
+					Historical Weather:
+				</h2>
+				<a href="http://wunderground.com">Weather Underground</a>
+			</li>
+			<li>
+				<h2>
+					Environmental Hazards:
+				</h2>
+				<a href="http://www.epa.gov/enviro/geo_data.html">U.S. Environmental Protection Agency</a>
+			</li>
+		</ul>
+	</footer>
+	{% include "includes/pane_contact.html" %}
+{% endblock %}

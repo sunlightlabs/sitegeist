@@ -1,0 +1,419 @@
+$color-medium: #00AAFF;
+$color-medium-comp: #EBEFF8;
+$color-dark: #3B3F43;
+$color-dark-comp: #E5EEF9;
+
+$fonts-demi: "franklin-gothic-ext-comp-urw", "helvetica neue", helvetica, arial, sans-serif;
+$fonts-serif: "Georgia", "minion", "Times New Roman", serif;
+$fonts-sans-serif: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+
+#people {
+    .lightBg{
+        background-color: #F5F5ED;
+    }
+    .mediumBg{
+        background-color: $color-medium;
+    }
+    .darkBg{
+        background-color: $color-dark;
+    }
+    .lightBg h1{
+        color: $color-dark;  /*  blue grey  */
+    }
+    .mediumBg h1, #people .mediumBg .comparison{
+        color: $color-medium-comp;  /*  blue white  */
+    }
+    .darkBg h1, #people .darkBg .comparison{
+        color: $color-dark-comp; /*  darker blue white  */
+    }
+    .comparison {
+        background: url(../../images/house_people.png) right top no-repeat;
+    }
+    .lightBg .comparison{
+        background-position: right top;
+    }
+    .mediumBg .comparison{
+        background-position: right -27px;
+    }
+    .darkBg .comparison{
+        background-position: right -54px;
+    }
+}
+
+
+/************  Average Age */
+
+#averageAge {
+
+    font-weight: 400;
+    font-size: 25px;
+
+    dl{
+        margin: 0 auto;
+        color: $color-medium;
+        margin-top: -40px;
+    }
+    dd, dt{
+        display: inline;
+        float: none;
+        margin: 0;
+    }
+    dt{
+        font-weight: 400;
+        font-size: 100px;
+        line-height: 1.3em;
+    }
+    dd{
+        font-family: $fonts-demi;
+    }
+
+}
+
+
+/************  Age Distribution */
+
+
+section#ageDistribution{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#ageDistribution {
+
+    position: relative;
+
+    #ageClusters{
+        color: $color-medium-comp;
+        font-family: $fonts-demi;
+        font-size: 20px;
+        padding-top: 12px;
+        margin-bottom: 10px;
+    }
+    .ageChart{
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        width: 250px;
+    }
+    .ageGroup#male, .ageGroup#female{
+        float: left;
+        width: 50%;
+    }
+
+    .ageGroup#male{
+        margin-top: -1px;
+    }
+    .ageGroup#male ul{
+        margin-top: 1px;
+    }
+    .ageGroup#male li{
+        float: right;
+        clear: both;
+        margin: 1px 1px 2px 1px;
+    }
+    .ageGroup#male h2{
+        color: $color-medium-comp;
+        text-align: right;
+        padding-right: 5px;
+    }
+
+    .ageGroup#female li{
+        background-color: $color-dark;  /*  blue grey  */
+        margin: 1px 1px 2px 1px;
+        float: left;
+        clear: both;
+    }
+    .ageGroup#female h2{
+        color: $color-dark;  /*  blue grey  */
+        text-align: left;
+        padding-left: 5px;
+    }
+    .ageGroup li {
+        text-indent: -9999em;
+        background-color: $color-medium-comp;
+        margin: 2px;
+        height: 12px;
+    }
+    h2{
+        margin: 0;
+        font-family: $fonts-sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+    }
+
+    .cluster {
+        display: table-row;
+    }
+    .cluster span {
+        height: 20px;
+        display: table-cell;
+        width: 305px;
+        vertical-align: bottom;
+        border-bottom: 1px dotted #268bc6;
+        padding-left: 15px;
+    }
+    .cluster.two {
+        height: 75px;
+    }
+    .cluster.three {
+        height: 105px;
+    }
+    .cluster.four {
+        height: 75px;
+    }
+    .cluster.five {
+        height: 60px;
+    }
+
+}
+
+
+/************  Children Under Five */
+
+
+section#childrenUnderFive {
+
+    padding-left: 0;
+    padding-right: 0;
+
+    .comparison {
+        margin-right: 15px;
+    }
+    .bgImage {
+        background: url(../../images/baby.png) 219px 11px no-repeat;
+        font-weight: 400;
+        font-size: 25px;
+    }
+    dl {
+        margin: -20px auto 20px auto;
+        color: $color-medium;
+    }
+    dd, dt {
+        display: block;
+        float: none;
+        margin: 0;
+        text-align: center;
+    }
+    dt {
+        font-weight: 400;
+        font-size: 75px;
+        line-height: 1.3em;
+    }
+    dd {
+        color: $color-dark;
+    }
+
+}
+
+
+
+/************  Average Household Income */
+
+
+
+#householdIncome{
+    font-family: $fonts-demi;
+}
+#householdIncome dl{
+    margin: 0;
+    width: 290px;
+}
+#householdIncome dd, #householdIncome dt{
+    display: block;
+    float: left;
+    margin: 0;
+}
+#householdIncome dt{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1em;
+    color: $color-medium-comp;  /*  blue white  */
+    width: 55px;
+    clear: both;
+    border-right: 1px dotted #268bc6;
+    padding: 4px 0;
+    margin-right: 3px;
+}
+#householdIncome dd{
+    color: $color-dark;
+    font-size: 30px;
+    height: 52px;
+    font-family: $fonts-serif;;
+    position: relative;
+    width: 230px;
+}
+#householdIncome dd .visual{
+    text-indent: -9999em;
+    background-color: $color-dark;  /*  blue grey  */
+    display: block;
+    height: 52px;
+}
+#householdIncome dd .unit{
+    position: absolute;
+    top: 0;
+    margin-left: 10px;
+    text-align: left;
+    margin-top: 4px;
+}
+
+
+
+
+/************  Ethnicity */
+
+
+section#ethnicity{
+    padding-left: 0;
+    padding-right: 0;
+    font-family: $fonts-sans-serif;
+    color: $color-medium-comp;  /*  blue white  */
+}
+section#ethnicity .comparison{
+    margin-right: 15px;
+}
+#ethnicity .ethnicityGraph{
+    overflow: hidden;
+    height: 250px;
+    position: relative;
+    text-align: center;
+}
+
+#ethnicity .labelCircle{
+    -webkit-border-radius: 125px;
+    -moz-border-radius: 125px;
+    border-radius: 125px;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    background-color: $color-dark;  /*  blue grey  */
+    position: absolute;
+    top: 80px;
+    left: 35px;
+}
+#ethnicity img#ethnicityPie{
+    margin: 0 auto;
+    position: absolute;
+    left: -46px;
+    top: 0;
+}
+#ethnicity  h2{
+    font-weight: 300;
+    font-size: 20px;
+}
+#ethnicity .unit{
+    color: $color-medium;
+    display: block;
+    font-family: $fonts-serif;;
+    font-size: 75px;
+    margin-top: -27px;
+}
+#ethnicity .left, #ethnicity .right{
+    font-size: 35px;
+    display: block;
+    position: absolute;
+    font-weight: 700;
+    top: 75px;
+}
+#ethnicity .left{
+    left: 15px;
+}
+#ethnicity .right{
+    right: 15px;
+}
+
+
+
+
+/************  Gender */
+
+section#gender{
+    position: relative;
+}
+#genderPie{
+    float: left;
+    margin-left: 15px;
+    margin-right: 40px;
+    margin-top: 8px;
+}
+#gender .genderCap {
+    position: absolute;
+    top: 62px;
+    left: 52px;
+}
+#gender dl{
+    float: left;
+    width: 102px;
+    margin: 0;
+}
+#gender dd.male{
+    border-bottom: 1px dotted #d1d0c6;
+}
+#gender .male{
+    color: #0AF;
+}
+#gender .female{
+    color: $color-dark;
+}
+#gender dt{
+    font-size: 30px;
+    font-family: $fonts-serif;;
+    width: 100%;
+}
+#gender dd{
+    font-size: 15px;
+    font-family: $fonts-sans-serif;
+    margin-left: 0;
+    padding-bottom: 13px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+/************  Political Contributions */
+
+section#politicalContribs{
+    padding-left: 0;
+    padding-right: 0;
+}
+section#politicalContribs .comparison{
+    margin-right: 15px;
+}
+#politicalContribs #partyMajority.repMajority {
+    background: url(../../images/repMajority.png) center bottom no-repeat;
+    padding-bottom: 170px;
+}
+#politicalContribs #partyMajority.demMajority {
+    background: url(../../images/demMajority.png) center bottom no-repeat;
+    padding-bottom: 170px;
+}
+#politicalContribs dt{
+    width: 50%;
+    color: $color-dark;
+    text-align: center;
+    font-size: 15px;
+    font-family: $fonts-sans-serif;
+}
+#politicalContribs dd{
+    font-size: 30px;
+    font-family: $fonts-serif;;
+    color: $color-dark;
+    width: 50%;
+    text-align: center;
+    margin-left: 0;
+}
+#politicalContribs .rep{
+    float: left;
+}
+#politicalContribs .dem{
+    float: right;
+    margin-top: -20px;
+}
+#politicalContribs dd.rep, #politicalContribs dd.dem {
+    clear: both;
+}
+#politicalContribs dd.dem {
+    margin-top: -42px;
+}

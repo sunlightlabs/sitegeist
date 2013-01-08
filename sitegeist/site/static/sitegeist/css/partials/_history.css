@@ -1,0 +1,156 @@
+#history .lightBg {
+  background-color: #F5F5ED; }
+
+#history .mediumBg {
+  background-color: #7B6490;
+  /*  purple  */ }
+
+#history .darkBg {
+  background-color: #414046; }
+
+#history .lightBg h1 {
+  color: #414046;
+  /*  purple grey  */ }
+
+#history .mediumBg h1, #history .mediumBg .comparison {
+  color: #F5F2F7;
+  /*  purple white  */ }
+
+#history .darkBg h1, #history .darkBg .comparison {
+  color: #EFECF1;
+  /*  darker purple white  */ }
+
+#history .comparison {
+  background: url(../../images/house_fun.png) right top no-repeat; }
+
+#history .lightBg .comparison {
+  background-position: right top; }
+
+#history .mediumBg .comparison {
+  background-position: right -27px; }
+
+#history .darkBg .comparison {
+  background-position: right -54px; }
+
+#history .content {
+  margin-top: -14px; }
+
+/************  Population */
+section#pop {
+  padding-left: 0;
+  padding-right: 0; }
+
+section#pop h2 {
+  display: block;
+  border-top: 1px dotted #675875;
+  border-bottom: 1px dotted #675875;
+  font-size: 75px;
+  font-family: "minion Pro", Georgia, "Times New Roman", sans-serif;
+  text-align: right;
+  padding-left: 5px;
+  font-weight: 300;
+  width: 300px;
+  color: #F5F2F7;
+  /*  purple white  */
+  background: #766289;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #766289 0%, #79658d 24%, #79658d 50%, #79658d 79%, #766289 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #766289), color-stop(24%, #79658d), color-stop(50%, #79658d), color-stop(79%, #79658d), color-stop(100%, #766289));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #766289 0%, #79658d 24%, #79658d 50%, #79658d 79%, #766289 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #766289 0%, #79658d 24%, #79658d 50%, #79658d 79%, #766289 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #766289 0%, #79658d 24%, #79658d 50%, #79658d 79%, #766289 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #766289 0%, #79658d 24%, #79658d 50%, #79658d 79%, #766289 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#766289', endColorstr='#766289',GradientType=0 );
+  /* IE6-9 */ }
+
+section#pop .populationTicker {
+  overflow: hidden;
+  height: 107px;
+  margin-bottom: 10px; }
+
+section#pop .populationTicker span {
+  display: block;
+  font-size: 75px;
+  font-family: "minion Pro", Georgia, "Times New Roman", sans-serif;
+  text-align: right;
+  padding-right: 15px;
+  font-weight: 300;
+  color: #F5F2F7;
+  /*  purple white  */ }
+
+section#pop .populationTicker span.numberBefore {
+  margin-top: -55px; }
+
+section#pop h2 {
+  margin: -50px 0; }
+
+/************  Population History */
+section#popHistory {
+  padding-left: 0;
+  padding-right: 0;
+  font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif; }
+
+section#popHistory h2 {
+  font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+  text-align: center; }
+
+section#popHistory dl {
+  margin: 0 auto 15px auto;
+  display: block;
+  width: 195px;
+  font-size: 17px; }
+
+section#popHistory dd, section#popHistory dt {
+  display: block;
+  float: left;
+  margin-left: 0; }
+
+section#popHistory dt {
+  text-indent: -9999em;
+  display: block;
+  margin-top: 2px;
+  margin-right: 5px; }
+
+section#popHistory dt.current {
+  background-color: #7B6490;
+  /*  purple  */
+  width: 15px;
+  height: 15px;
+  border-radius: 8px; }
+
+section#popHistory dt.home {
+  border: 2px solid #414046;
+  /*  purple grey  */
+  width: 11px;
+  height: 11px;
+  border-radius: 7px;
+  margin-left: 10px; }
+
+/************  Nearby Historic Landmarks */
+section#nearbyHistory .barChart li {
+  background: #7B6490;
+  /*  purple  */
+  margin: 3px 0;
+  color: #F5F2F7;
+  /*  purple white  */
+  height: 60px;
+  font-family: "franklin-gothic-urw", "helvetica neue", helvetica, arial, sans-serif;
+  font-weight: 300; }
+
+section#nearbyHistory .barChart .measure {
+  display: block;
+  font-size: 30px;
+  font-family: Georgia, "minion", "Times New Roman", sans-serif;
+  margin-bottom: -5px;
+  font-weight: 300; }
+
+section#nearbyHistory .barChart .location {
+  width: 290px;
+  display: block;
+  padding: 0 8px; }

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Mobile Test</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body { background-color: #ddd; }
+           	#mobile-view {
+                background-color: #f5f5ed;
+                border: 1px solid #bbb;
+                display: block;
+                width: 320px;
+                height: 480px;
+                margin: 0 auto;
+            }
+            #mobile-view.iphone5 { height: 568px; }
+            .preferences {
+                background-color: #eee;
+                border-bottom: 1px solid #bbb;
+                box-shadow: 0 0 7px #bbb;
+                margin-bottom: 2em;
+                padding: 2em 0 0 0;
+                text-align: center;
+            }
+            .preferences select[name=pane] { margin-right: 1em; }
+            .preferences label.checkbox { margin-left: 1em; }
+            .preferences input[type=submit] { margin-left: 1em; }
+            .preferences .extras { border-left: 1px solid #999; margin-left: 1em; }
+            #the-map { width: 100%; height: 300px;}
+        </style>
+    </head>
+    <body>
+
+    	<div class="modal hide fade" id="locator-map">
+  			<div class="modal-header">
+    			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    			<h3>Where are we?</h3>
+  			</div>
+  			<div class="modal-body">
+    			<div id="the-map"></div>
+  			</div>
+  			<div class="modal-footer">
+    			<a href="#" id="locator-set" class="btn btn-primary">Set Location</a>
+  			</div>
+		</div>
+
+		<div class="preferences">
+            <form action="." method="get" class="form-inline">
+
+                <label>
+                    Pane
+                    <select name="pane" class="input-medium">
+                        <option>people</option>
+                        <option>housing</option>
+                        <option>fun</option>
+                        <option>environment</option>
+                        <option>history</option>
+                    </select>
+                </label>
+
+                <label>
+                    Location
+                    <input type="text" name="lat" class="input-small" value="38.906956">
+                </label>
+                <input type="text" name="lon" class="input-small" value="-77.042883">
+
+                <a href="#" id="locator"><i class="icon-screenshot"></i></a>
+                <a href="#locator-map" role="button" data-toggle="modal"><i class="icon-globe"></i></a>
+
+                <label class="checkbox">
+                    <input type="checkbox" name="retina" value="1" checked>
+                    Retina
+                </label>
+
+                <input type="submit" value="Load Pane" class="btn btn-primary">
+
+                <span class="extras">
+
+                    <label class="checkbox">
+                        <input type="checkbox" name="size" value="1" checked>
+                        iPhone 5
+                    </label>
+
+                </span>
+
+            </form>
+        </div>
+
+        <iframe id="mobile-view" class="iphone5" src=""></iframe>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwMprMBYoz-7FxsF1_YLBHKGEwdvtJp4w&amp;sensor=true"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function() {
+
+                var baseUrl = "/api"
+
+                var $preferencesForm = $('.preferences form');
+                var $mobileView = $('#mobile-view');
+                var $locator = $('#locator');
+
+                $preferencesForm.submit(function(ev) {
+
+                    ev.preventDefault();
+
+                    var pane = $preferencesForm.find('select[name=pane]').val();
+                    var lat = $preferencesForm.find('input[name=lat]').val();
+                    var lon = $preferencesForm.find('input[name=lon]').val();
+
+                    var retina = $preferencesForm.find('input[name=retina]').is(':checked') ? "1" : "0";
+
+                    var url = baseUrl + '/' + pane + '/?cll=' + lat + ',' + lon + '&highres=' + retina;
+
+                    $mobileView.attr('src', '').attr('src', url);
+
+                });
+
+                $('input[name=size]').bind('change', function() {
+                    var $checkbox = $(this);
+                    if ($checkbox.is(':checked')) {
+                        $mobileView.addClass('iphone5');
+                    } else {
+                        $mobileView.removeClass('iphone5');
+                    }
+                });
+
+                $('#locator').click(function(ev) {
+                    ev.preventDefault();
+                    if ("geolocation" in navigator) {
+                        navigator.geolocation.getCurrentPosition(function(position) {
+                            $preferencesForm.find('input[name=lat]').val(position.coords.latitude);
+                            $preferencesForm.find('input[name=lon]').val(position.coords.longitude);
+                        });
+                    } else {
+                        alert("Sorry, your browser does not support location services.");
+                    }
+                });
+
+		        var mapOptions = {
+					center: new google.maps.LatLng(38.906956, -77.042883),
+					zoom: 16,
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					streetViewControl: false
+				};
+				var map = new google.maps.Map(document.getElementById("the-map"), mapOptions);
+
+				$('#locator-map').on('shown', function () {
+
+    				google.maps.event.trigger(map, "resize");
+
+	                var lat = $preferencesForm.find('input[name=lat]').val();
+	                var lon = $preferencesForm.find('input[name=lon]').val();
+
+	                map.panTo(new google.maps.LatLng(lat, lon));
+
+				});
+
+				$('#locator-set').click(function(ev) {
+
+					ev.preventDefault();
+
+					var ll = map.getCenter();
+
+					$preferencesForm.find('input[name=lat]').val(ll.lat());
+					$preferencesForm.find('input[name=lon]').val(ll.lng());
+
+					$('#locator-map').modal('hide');
+
+				});
+
+            });
+        </script>
+    </body>
+</html>
