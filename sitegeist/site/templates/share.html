@@ -29,6 +29,11 @@
 
 	<title>Sitegeist from the Sunlight Foundation</title>
 
+	<style>
+    	.share-buttons { padding-top: 15px; }
+    	.share-buttons .socialite { margin-right: 10px; }
+    </style>
+
 </head>
 <body>
     <div id="container">
@@ -36,17 +41,19 @@
             <a id="foundationSm" class="textReplace" href="http://sunlightfoundation.com">Sunlight Foundation</a>
             <h1><a class="textReplace" href="/">Sitegeist</a></h1>
             <div id="feature" class="clearfix">
-                <iframe src="{{ pane_url }}" id="mobile-frame"></iframe>
+                <iframe src="{{ pane_url }}" id="mobile-frame" class="preview"></iframe>
                 <h2>Ground yourself with data</h2>
                 <p>Understand and uncover the identity of your location with a tap</p>
                 <ul id="downloadLinks" >
                     <li><a id="appBtn" class="textReplace" href="/ios/">Available on the App Store</a></li>
                     <li><a id="appBtn2" class="textReplace" href="/android/">Android App on Google Play</a></li>
                 </ul>
-                <div id="socialMedia" style="padding-top: 13px">
-                    <script type="text/javascript" src="http://cdn.gigya.com/js/gigyaGAIntegration.js" ></script>
-                    <script src="http://cdn.gigya.com/js/socialize.js?apiKey=3_BLRB_2LlQJZDUW1wb9_ZOps-sOnnzA_e6xxNSwJBBGoB-SavmPAKHkaVVZPE5Kx8"></script>
-                </div>
+                <div class="share-buttons"
+		             data-socialite="auto"
+		             data-services="twitter,facebook"
+		             data-options="linkBack=http://sitegeist.sunlightfoundation.com/&amp;width=60&amp;text=With%20just%20a%20tap%2C%20better%20understand%20your%20surroundings%20using%20Sitegeist&amp;showCounts=right&amp;size=24"
+		             data-facebook-like-options="layout=button_count"
+		             data-twitter-tweet-options="via=sunfoundation"></div>
             </div>
         </header>
     </div>
@@ -86,38 +93,7 @@
     {% endcomment %}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="{{ STATIC_URL }}sfapp.js"></script>
-    <script type="text/javascript">
-        var ua = new gigya.socialize.UserAction();
-        ua.setTitle($('title').text());
-        ua.setLinkBack('http://snlg.ht/sitegeist');
-        ua.addMediaItem({
-            type: 'image',
-            href: window.location.href,
-            src: '{{ STATIC_URL }}images/logo.png'
-        });
-
-        /*
-         * parameter docs at:
-         * http://developers.gigya.com/020_Client_API/020_Methods/socialize.showShareBarUI
-         */
-        var params = {
-            containerID: 'socialMedia',
-            iconsOnly: true,
-            layout: 'horizontal',
-            noButtonBorders: true,
-            shareButtons: [
-                {
-                    provider: 'twitter',
-                }, {
-                    provider: 'facebook',
-                }
-            ],
-            shortURLs: 'never',
-            showCounts: 'right',
-            userAction: ua
-        };
-        gigya.socialize.showShareBarUI(params);
-    </script>
+    <script src="https://s3.amazonaws.com/assets.sunlightfoundation.com/social/scripts/simple-socialite-pack.min.js" async></script>
     {% include "includes/ga.html" %}
 </body>
 

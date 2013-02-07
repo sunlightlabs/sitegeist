@@ -123,7 +123,7 @@ h1 { width: 268px; height: 70px; padding-top: 45px; }
 h1 a { width: 268px; height: 70px; background: url(images/logo.png) top left no-repeat; }
 
 #feature { margin-top: 85px; }
-#feature iframe {
+#feature iframe.preview {
     background-color: #f5f5ed;
     border: 10px solid #151110;
     float: left;
@@ -135,7 +135,7 @@ h1 a { width: 268px; height: 70px; background: url(images/logo.png) top left no-
        -moz-border-radius: 10px;
             border-radius: 10px;
 }
-#feature img { float: left; margin-right: 85px; margin-left: 60px; }
+#feature img.phones { float: left; margin-right: 85px; margin-left: 60px; }
 #feature { color: #fdfbfb; }
 #feature h2 { text-transform: uppercase; font-size: 273%; line-height: 40px; padding-top: 70px; font-weight: 700; }
 #feature p { font-size: 200%; font-family: "franklin-gothic-urw" "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 300; line-height: 1em; }
