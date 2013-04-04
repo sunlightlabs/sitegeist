@@ -56,7 +56,7 @@ input, select { vertical-align:middle; }
 body { color: #413a3a; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 19px; font-size: 13px; }
 button.disabled { opacity: 0.3; filter: alpha(opacity=30); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; }
 pre, code, kbd, samp { font-family: monospace, sans-serif; }
-p { margin-bottom: 1.3em; line-height: 22px; margin-bottom: 55px;}
+p { margin-bottom: 1.3em; line-height: 22px; }
 
 html { overflow-y: scroll; }
 
@@ -144,9 +144,13 @@ h1 a { width: 268px; height: 70px; background: url(images/logo.png) top left no-
 #foundationLogo { background: url(images/img_foundationLg.png) top left no-repeat; width: 199px; height: 59px; margin-bottom: 30px; }
 
 #downloadLinks li { float: left; margin-right: 20px; }
-#appBtn { background: url(images/btn_appStore.png) left -4px no-repeat; width: 165px; height: 62px; background-size: 165px 62px; }
+#appBtn { background: url(images/btn_appStore.png) left -2px no-repeat; width: 165px; height: 62px; background-size: 165px 62px; }
 #appBtn2 { background: url(images/btn_androidApp.png) top left no-repeat; width: 151px; height: 60px; background-size: 151px;}
-#btnSignup { background: url(images/btn_signup.png) top left no-repeat; width: 107px; height: 41px; margin-top: 7px; }
+#appBtn:hover, 
+#appBtn2:hover { 
+	opacity: .8;
+}
+#btnSignup { background: url(images/btn_signup.png) top left no-repeat; width: 107px; height: 41px; margin-top: 13px; }
 #btnSignup:hover { background: url(images/btn_signup.png) bottom left no-repeat; }
 
 h2, h3, h4, h5, h6 { font-weight: normal; font-family: "franklin-gothic-urw" "Helvetica Neue", Helvetica, Arial, sans-serif; }
@@ -173,13 +177,13 @@ input { background: #f8f8f6; border: 1px solid #dbdbcb; padding: 7px 10px 5px; -
 #appPics { margin-top: 30px; }
 
 #footerWrapper { background: url(images/bg_footer.jpg) center top repeat-x; height: 324px; margin-top: -45px; color: #7b7575; }
-#footerWrapper footer { padding-top: 80px; }
+#footerWrapper footer { padding-top: 53px; }
 #footerCol1 { float: left; width: 285px; padding-right: 25px; margin-right: 25px; background: url(images/bg_footerLine.jpg) right top repeat-y; }
-#footerCol2 { float: left; width: ; background: url(images/bg_badge.jpg) right 10px no-repeat; width: 605px; padding-top: 50px; }
+#footerCol2 { float: left; background: url(images/bg_badge.jpg) right 44px no-repeat; width: 605px; padding-top: 92px; }
 footer form ul { vertical-align: text-bottom; }
 footer .featuredOn{
 	text-align: center;
-	margin-top: 5px;
+	margin-top: 31px;
 	padding-bottom: 40px;
 }
 .featuredOn h3{
@@ -189,10 +193,17 @@ footer .featuredOn{
 	height: 44px;
 	padding-top: 11px;
 }
+.featuredOn ul{
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
 .featuredOn li{
 	display: inline;
 	padding: 15px 10px 0 10px;
 }
 ul.minilist { display: inline-block; list-style-type: disc; margin: 0 14px 0 14px; padding: 0;  }
 .normalMargins { margin: 0 0 1em 0; }
+.share-buttons .socialite:hover{
+	opacity: .8;
+}
 
