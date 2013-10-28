@@ -39,20 +39,8 @@ def load_tracts():
 
 def load_tract_records(keys):
 
-    """
+    c = census.Census(settings.CENSUS_KEY, year=2011)
 
-
-
-
-        Need to reload Montana!!!!!!!!
-
-        for state in [us.states.MT, ]:
-
-    """
-
-    c = census.Census(settings.CENSUS_KEY)
-
-    # for state in [us.states.MT]:
     for state in us.STATES:
 
         print state.name
@@ -87,12 +75,12 @@ def load_tract_records(keys):
 
 
 def load():
-    # reset()
-    # load_tracts()
-    # load_tract_records(DATA.keys())
+    reset()
+    load_tracts()
+    load_tract_records(DATA.keys())
 
-    keys = ["B25035_001E"]
-    load_tract_records(keys)
+    # keys = ["B25035_001E"]
+    # load_tract_records(keys)
 
 if __name__ == '__main__':
     load()
