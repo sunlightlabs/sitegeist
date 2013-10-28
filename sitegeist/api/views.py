@@ -145,6 +145,7 @@ class SitegeistView(View):
             context = {
                 'coords': coords,
                 'data': data['data'],
+                'vertical_offset': request.GET.get('vo'),
                 'namespace': self.namespace,
                 'show_header': request.GET.get('header') != "0",
             }

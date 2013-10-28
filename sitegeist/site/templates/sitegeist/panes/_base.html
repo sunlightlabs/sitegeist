@@ -8,6 +8,13 @@
         {% block css %}
             <link rel="stylesheet" type="text/css" href="{% static "sitegeist/css/production.css" %}">
         {% endblock %}
+        {% if vertical_offset %}
+        	<style>
+        		div#{% block id %}{% endblock %} {
+        			margin-top: {{ vertical_offset }}px;
+        		}
+        	</style>
+        {% endif %}
         <script src="{% static "sitegeist/js/rgbcolor-canvg.min.js" %}"></script>
         <script src="{% static "sitegeist/js/zepto.min.js" %}"></script>
         <script src="//use.typekit.net/hid0uhh.js"></script>
