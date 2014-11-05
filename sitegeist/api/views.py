@@ -357,8 +357,6 @@ class HousingView(SitegeistView):
                         }
                     })
 
-        # resp['data']['alert'] = "New housing data is being loaded from the Census Bureau. Please excuse our dust."
-
         return resp
 
 
