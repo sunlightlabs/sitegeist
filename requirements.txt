@@ -13,9 +13,9 @@ dj-database-url==0.2.2
 pymongo==2.6.3
 
 # boundary service requirements
-django-appconf
-django-jsonfield
-django-tastypie
+django-appconf==0.5
+django-jsonfield==0.8.11
+django-tastypie==0.9.9
 -e git://github.com/tauberer/represent-boundaries.git@1186ce64f786929ce5efb28515129d760e1f0c9a#egg=boundaries
 
 gunicorn==18.0
