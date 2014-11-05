@@ -1,4 +1,4 @@
-from django.views.generic.simple import direct_to_template, redirect_to
+from django.views.generic import TemplateView, RedirectView
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.http import Http404
@@ -41,13 +41,13 @@ urlpatterns = patterns('',
     url(r'^500/$', justatemplate('500.html')),
 
     url(r'^api/', include('sitegeist.api.urls')),
-    url(r'^dev/$', direct_to_template, {'template': 'dev.html'}),
+    url(r'^dev/$', TemplateView.as_view(template_name='dev.html')),
     url(r'^geo/', include('boundaries.urls')),
 
-    url(r'^$', direct_to_template, {'template': 'index.html'}),
+    url(r'^$', TemplateView.as_view(template_name='index.html')),
     url(r'^about/$', justatemplate('sitegeist/panes/methodology.html')),
     url(r'^share/$', share),
 
-    url(r'^android/$', redirect_to, {'url': 'https://play.google.com/store/apps/details?id=com.sunlightfoundation.sitegeist.android'}),
-    url(r'^ios/$', redirect_to, {'url': 'https://itunes.apple.com/us/app/sitegeist/id582687408?ls=1&mt=8'}),
+    url(r'^android/$', RedirectView.as_view(url='https://play.google.com/store/apps/details?id=com.sunlightfoundation.sitegeist.android')),
+    url(r'^ios/$', RedirectView.as_view(url='https://itunes.apple.com/us/app/sitegeist/id582687408?ls=1&mt=8')),
 )
