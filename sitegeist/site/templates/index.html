@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}main.css">
     <link rel="shortcut icon" href="http://assets.sunlightfoundation.com.s3.amazonaws.com/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}doormat/doormat.css">
 
     <meta property="og:site_name" content="Sunlight Foundation">
     <meta property="og:title" content="Sitegeist">
@@ -30,6 +31,17 @@
 
 </head>
 <body>
+    <div class="doormat" id="doormat">
+        <div class="doormat-overlay">
+        </div>
+            <div class="doormat-doormat">
+                <a id="closeOverlay" class="doormat-close" onclick="this.parentNode.parentNode.style.display = 'none'">close</a>
+                <a class="click" href="">
+                    <h1>Save Sitegeist!</h1>
+                    <h2>Help fund the revival of Sitegeist<br>on <span class="kickstarter">kickstarter</span></h2>
+                </a>
+            </div>
+    </div>
     <div id="container">
         <header>
             <a id="foundationSm" class="textReplace" href="http://sunlightfoundation.com">Sunlight Foundation</a>
