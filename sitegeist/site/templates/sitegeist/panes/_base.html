@@ -28,16 +28,17 @@
                 {% endif %}
             </header>
             <div class="content" style="margin-bottom: 60px;">
-                {% comment %}
-                <section class="mediumBg" style="text-align: center; margin-top: -13px; padding: 5px 0 10px;">
+                <section class="mediumBg" style="line-height: 140%; margin-top: -13px; padding: 5px 0 10px 12px;">
                     <a href="/kickstarter/" style="color: #fff; font-family: franklin-gothic-urw, 'helvetica neue', helvetica, arial, sans-serif; font-size: 18px; display: block; padding: 5px 0; width: 100%;">
-                        <span style="font-weight: bold;">Help save Sitegeist!</span>
+                        <img src="http://sitegeist.s3.amazonaws.com/kickstarter-logo.png" style="float: left; margin-right: 1em;">
+                        <span style="font-weight: bold;">Save Sitegeist!</span>
                         <br>
-                        <span style="text-decoration: underline;">See more details on Kickstarter</span>
+                        <span style="font-size: 80%;">Help us keep the app alive.</span>
+                        <br>
+                        <span style="font-size: 80%; text-decoration: underline;">Back us on Kickstarter</span>
                     </a>
                 </section>
-                {% endcomment %}
-            	{% if data.alert %}
+                {% if data.alert %}
 	            	<section class="mediumBg" style="text-align: center;">
 	            		<p style="color: #fff; font-family: franklin-gothic-urw, 'helvetica neue', helvetica, arial, sans-serif; font-size: 15px;">{{ data.alert }}</p>
 					</section>
