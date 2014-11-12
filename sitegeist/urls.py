@@ -50,5 +50,5 @@ urlpatterns = patterns('',
 
     url(r'^android/$', RedirectView.as_view(url='https://play.google.com/store/apps/details?id=com.sunlightfoundation.sitegeist.android')),
     url(r'^ios/$', RedirectView.as_view(url='https://itunes.apple.com/us/app/sitegeist/id582687408?ls=1&mt=8')),
-    url(r'^kickstarter/$', RedirectView.as_view(url='https://kickstarter.com')),
+    url(r'^kickstarter/$', RedirectView.as_view(url='https://www.kickstarter.com/projects/sunlightfoundation/save-sitegeist')),
 )
